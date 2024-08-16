@@ -1,0 +1,9 @@
+database
+files
+.env
+__pycache__
+logs
+.vscode/
+keys
+venv
+.log
