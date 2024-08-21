@@ -21,3 +21,4 @@ waitress==2.1.2
 gevent==23.7.0
 requests==2.31.0
 colorlog==6.7.0
+marshmallow
