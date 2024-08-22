@@ -38,9 +38,9 @@ class Staff(MethodView):
     @blp.arguments(StaffUpdateSchema)
     def put(self,staff_data,staff_id):
         try:
-            if staff_data['password']:
-                staff_data['password']=pbkdf2_sha256.hash(staff_data)
-            mongo.db.staff.update_one({"_id": ObjectId(staff_id)}, {'$set': staff_data})
+            # if staff_data['password']:
+            #     staff_data['password']=pbkdf2_sha256.hash(staff_data)
+            # mongo.db.staff.update_one({"_id": ObjectId(staff_id)}, {'$set': staff_data})
             staff = mongo.db.staff.find_one_or_404({"_id": ObjectId(staff_id)})
             staff = json.loads(json_util.dumps(staff))
             return {"message": "Member updated successfully ", **staff}
