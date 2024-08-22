@@ -4,7 +4,7 @@ from enum import Enum
 # from marshmallow_enum import EnumField
 
 class PlainStudentSchema(Schema):
-    id = fields.Str(dump_only= True)
+    _id = fields.Str(dump_only= True)
     email = fields.Email(required= True)
     name= fields.Str(required=True)
     phone = fields.Int(required = True)
@@ -22,7 +22,7 @@ class LoginSchema(Schema):
 
 
 class PlainStaffSchema(Schema):
-    id = fields.Str(dump_only= True)
+    _id = fields.Str(dump_only= True)
     name= fields.Str(required=True)
     email = fields.Email(required= True)
     phone = fields.Int(required = True)
@@ -34,6 +34,15 @@ class StaffSchema(PlainStaffSchema):
     created_at= fields.Str(required=True)
     updated_at= fields.Str()
 
+class StaffUpdateSchema(Schema):
+    id = fields.Str(dump_only= True)
+    name= fields.Str()
+    email = fields.Email()
+    phone = fields.Int()
+    dept = fields.Str()
+    is_admin= fields.Bool()
+    password = fields.Str(load_only=True)
+    
 class StaffLogin(Schema):
     staff_id = fields.Str(load_only=True)
     name = fields.Str(required = True)
