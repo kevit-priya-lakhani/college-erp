@@ -1,11 +1,11 @@
 from email.policy import default
-from marshmallow import Schema,fields
+from marshmallow import Schema,fields,validate
 from enum import Enum
 # from marshmallow_enum import EnumField
 
 class PlainStudentSchema(Schema):
     _id = fields.Str(dump_only= True)
-    email = fields.Email(required= True)
+    email = fields.Email(required= True,validate = validate.Regexp(".*@.*student.*"))
     name= fields.Str(required=True)
     phone = fields.Int(required = True)
     dept = fields.Str(required = True)
@@ -16,6 +16,16 @@ class PlainStudentSchema(Schema):
 class StudentSchema(PlainStudentSchema):
     created_at= fields.Str(required=True)
     updated_at= fields.Str()
+
+class StudentUpdateSchema(Schema):
+    email = fields.Email(validate = validate.Regexp(".*@.*student.*"))
+    name= fields.Str()
+    phone = fields.Int()
+    dept = fields.Str()
+    batch = fields.Int()
+    sem = fields.Int()
+    password = fields.Str()
+    
 class LoginSchema(Schema):
     email = fields.Email(required= True)
     password= fields.Str(required=True)
@@ -24,7 +34,7 @@ class LoginSchema(Schema):
 class PlainStaffSchema(Schema):
     _id = fields.Str(dump_only= True)
     name= fields.Str(required=True)
-    email = fields.Email(required= True)
+    email = fields.Email(required= True,validate = validate.Regexp(".*@.*staff.*"))
     phone = fields.Int(required = True)
     dept = fields.Str(required = True)
     is_admin= fields.Bool(default= False)
@@ -37,7 +47,7 @@ class StaffSchema(PlainStaffSchema):
 class StaffUpdateSchema(Schema):
     id = fields.Str(dump_only= True)
     name= fields.Str()
-    email = fields.Email()
+    email = fields.Email(validate = validate.Regexp(".*@.*staff.*"))
     phone = fields.Int()
     dept = fields.Str()
     is_admin= fields.Bool()

@@ -21,20 +21,16 @@ class Index(MethodView):
     def get(self):
         return "App is running..."
 
-@blp.route("/staff")
-class StaffList(MethodView):
-    def get(self):
-        return "staff"
     
-@jwt_required()
 @blp.route("/staff/<string:staff_id>")
 class Staff(MethodView):
+    @jwt_required()
     @blp.response(200,StaffSchema)
     def get(self,staff_id):
         staff = mongo.db.staff.find_one_or_404({"_id":ObjectId(staff_id)})
         staff = json.loads(json_util.dumps(staff))
         return {**staff}
-    
+    @jwt_required()
     @blp.response(200, StaffSchema)
     @blp.arguments(StaffUpdateSchema)
     def put(self,staff_data,staff_id):
@@ -44,13 +40,15 @@ class Staff(MethodView):
             pass
         finally:
             try:
+                staff_data['updated_at']= datetime.datetime.now()
                 mongo.db.staff.update_one({"_id": ObjectId(staff_id)}, {'$set': staff_data})
                 staff = mongo.db.staff.find_one_or_404({"_id": ObjectId(staff_id)})
                 staff = json.loads(json_util.dumps(staff))
                 return {"message": "Member updated successfully ", **staff}
             except Exception as e:
                 abort(401, message= f"An error occurred while updating. {e}")
-    
+
+    @jwt_required()
     def delete(self, staff_id):
         try:
             mongo.db.staff.delete_one({"_id":ObjectId(staff_id)})
@@ -60,8 +58,16 @@ class Staff(MethodView):
 
 
 
-
-
+@blp.route("/staff")
+class StaffList(MethodView):
+    @jwt_required()
+    def get(self):
+        # logger.info("GET method accessed for all staffs")
+        staff_list = mongo.db.staff.find()
+        staff_list = json.loads(json_util.dumps(staff_list))
+        # logger.info("All staffs retrieved successfully")
+        return {"staff_list": list(staff_list)}
+    
 
 
 

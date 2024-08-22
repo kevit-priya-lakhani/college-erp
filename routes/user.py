@@ -72,15 +72,14 @@ class StudentRegister(MethodView):
     @jwt_required()
     @blp.arguments(PlainStudentSchema)
     def post(self,mem_data):
-        if re.match(".*@.*student.*",mem_data['email']):
-            if not mongo.db.students.find_one({"email":mem_data['email']}):
-                mem_data['created_at'] = datetime.datetime.now()
-                mem_data["password"] = pbkdf2_sha256.hash(mem_data["password"])
-                student_id = mongo.db.students.insert_one(mem_data).inserted_id
-                student_id = json.loads(json_util.dumps(student_id))
-                return {"message":"Member registered","id":student_id}
-            return {"message": "email already exists"}
-        return {"message":"Invalid email"}
+        if not mongo.db.students.find_one({"email":mem_data['email']}):
+            mem_data['created_at'] = datetime.datetime.now()
+            mem_data["password"] = pbkdf2_sha256.hash(mem_data["password"])
+            student_id = mongo.db.students.insert_one(mem_data).inserted_id
+            student_id = json.loads(json_util.dumps(student_id))
+            return {"message":"Member registered","id":student_id}
+        return {"message": "email already exists"}
+
 
 
 @blp.route("/register/staff")
