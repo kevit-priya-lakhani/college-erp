@@ -3,7 +3,7 @@ import json
 from os import access
 from bson import ObjectId, json_util
 from flask import request
-from flask_jwt_extended import create_access_token, create_refresh_token, get_jwt_identity, jwt_required, get_jwt
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 import jwt
@@ -100,18 +100,3 @@ class StaffRegister(MethodView):
             return {"message": "email already exists"}
         return {"message":"Invalid email"}
  
-@blp.route("/refresh")
-class TokenRefresh(MethodView):
-    @jwt_required(refresh=True)
-    def post(self):
-        # logger.info("Token refresh POST method accessed")
-        try:
-            current_user = get_jwt_identity()
-            new_token = create_access_token(identity=current_user, fresh=False)
-            jti = get_jwt()["jti"]
-            BLOCKLIST.add(jti)
-            # logger.info(f"Token refreshed for user '{current_user}'")
-            return {"access token": new_token}
-        except Exception as e:
-            # logger.error(f"Error during token refresh: {str(e)}")
-            abort(500, message="An error occurred during token refresh")
