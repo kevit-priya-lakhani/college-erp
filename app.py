@@ -6,6 +6,7 @@ from flask_jwt_extended import JWTManager
 from routes.staff import blp as StaffBlueprint
 from routes.student import blp as StudentBlueprint
 from routes.user import blp as UserBlueprint
+from routes.attendance import blp as AttendanceBlueprint
 from blocklist import BLOCKLIST
 from db import mongo
 
@@ -80,3 +81,4 @@ def missing_token_callback(error):
 api.register_blueprint(StaffBlueprint)
 api.register_blueprint(StudentBlueprint)
 api.register_blueprint(UserBlueprint)
+api.register_blueprint(AttendanceBlueprint)

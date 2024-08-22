@@ -9,7 +9,10 @@ from flask_smorest import Blueprint, abort
 from models.schema import  StudentSchema,StudentUpdateSchema
 from passlib.hash import pbkdf2_sha256
 from db import mongo
+from helper import authorize
 import re
+from log_services.logger import logger  # Import your logger
+
 
 
 blp = Blueprint("student", __name__, description="Operations on students")
@@ -25,6 +28,7 @@ class Student(MethodView):
         return {**student}
     
     @jwt_required()
+    @authorize(permission= "staff")
     @blp.response(200, StudentSchema)
     @blp.arguments(StudentUpdateSchema)
     def put(self,student_data,student_id):
@@ -45,6 +49,7 @@ class Student(MethodView):
                 abort(401, message= f"An error occurred while updating. {e}")
 
     @jwt_required()
+    @authorize(permission= "staff")
     def delete(self, student_id):
         try:
             mongo.db.students.delete_one({"_id":ObjectId(student_id)})

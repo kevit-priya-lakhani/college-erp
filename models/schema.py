@@ -45,7 +45,7 @@ class StaffSchema(PlainStaffSchema):
     updated_at= fields.Str()
 
 class StaffUpdateSchema(Schema):
-    id = fields.Str(dump_only= True)
+    _id = fields.Str(dump_only= True)
     name= fields.Str()
     email = fields.Email(validate = validate.Regexp(".*@.*staff.*"))
     phone = fields.Int()
@@ -59,8 +59,9 @@ class StaffLogin(Schema):
     password = fields.Str(required = True)
 
 class AttendanceSchema(Schema):
+    _id= fields.Str(load_only= True)
     student_id= fields.Str(load_only= True)
-    date = fields.DateTime()
+    date = fields.Str()
     present = fields.Boolean()
     
 
