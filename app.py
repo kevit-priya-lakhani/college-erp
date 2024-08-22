@@ -4,7 +4,10 @@ from flask import Flask, jsonify
 from flask_smorest import Api
 from flask_jwt_extended import JWTManager
 from routes.staff import blp as StaffBlueprint
-# from db import mongo
+from routes.student import blp as StudentBlueprint
+from routes.user import blp as UserBlueprint
+from blocklist import BLOCKLIST
+from db import mongo
 
 
 app = Flask(__name__)
@@ -23,10 +26,10 @@ app.config["OPENAPI_VERSION"] = "3.0.3"
 app.config["OPENAPI_URL_PREFIX"] = "/"
 app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
 app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
-# app.config["MONGO_URI"] =  os.environ.get("MONGO_URL")
+app.config["MONGO_URI"] =  os.environ.get("MONGO_URL")
+print(app.config["MONGO_URI"])
+mongo.init_app(app)
 
-
-# mongo.init_app(app)
 
 api = Api(app)
 
@@ -75,3 +78,5 @@ def missing_token_callback(error):
     )
 
 api.register_blueprint(StaffBlueprint)
+api.register_blueprint(StudentBlueprint)
+api.register_blueprint(UserBlueprint)
