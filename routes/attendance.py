@@ -1,12 +1,13 @@
 import datetime
 from email import message
+from importlib.metadata import MetadataPathFinder
 import json
 from os import access
 from bson import ObjectId, json_util
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from helper import authorize
+from helper import authorize, authorizeUpdate
 from models.schema import AttendanceSchema
 from db import mongo
 import re
@@ -60,8 +61,8 @@ class Attendance(MethodView):
             attendance_data['date'] = datetime.datetime.strptime(attendance_data['date'], f"%d-%m-%Y")
             print(attendance_data['date'])
             mongo.db.attendance.insert_one(attendance_data)
-            logger.info("Attendance data updated successfully.")
-            return {"message": "Attendance data updated successfully"}
+            logger.info("Attendance data added successfully.")
+            return {"message": "Attendance data added successfully"}
         except Exception as e:
             logger.error(f"An error occurred while inserting attendance data: {e}")
             abort(400, message=f"An exception occurred while inserting data, {e}")
@@ -93,7 +94,7 @@ class AttendanceStudent(MethodView):
         logger.info(f"Attendance records retrieved for student ID: {student_id}")
         return {"attendance": list(attendance_list)}
     
-    
+
 @blp.route("/attendance/<string:date>")
 class AttendanceDate(MethodView):
     """
@@ -118,10 +119,30 @@ class AttendanceDate(MethodView):
         logger.info(f"Fetching attendance records for date: {date}")
         try:
             date = datetime.datetime.strptime(date, f"%Y-%m-%d").datetime()
-            attendance_list = mongo.db.attendance.find({"date": date})
-            attendance_list = json.loads(json_util.dumps(attendance_list))
+            attendance_list = mongo.db.attendance.find(
+                {"date": date}
+                )
+            attendance_list = json.loads(
+                json_util.dumps(attendance_list)
+                )
             logger.info(f"Attendance records retrieved for date: {date}")
             return {"attendance": list(attendance_list)}
         except Exception as e:
             logger.error(f"An error occurred while fetching attendance data for date {date}: {e}")
             abort(400, message=f"An error occurred while fetching attendance data for date {date}. {e}")
+
+
+
+@jwt_required()
+@blp.route("/attendance/<string:date>/<string:student_id>")
+class AttendanceUpdate(MethodView):
+    @blp.arguments(AttendanceSchema)
+    def put(self,attendance_data,date, student_id):
+        try:
+            date = datetime.datetime.strptime(date, f"%d-%m-%Y")
+            mongo.db.attendance.update_one({"date":date,"student_id":student_id},{'$set':{"present":attendance_data['present']}})
+            logger.info("Attendance data updated successfully.")
+            return {"message": "Attendance data updated successfully"}
+        except Exception as e:
+            logger.error(f"An error occurred while updating attendance data: {e}")
+            abort(400, message=f"An exception occurred while inserting data, {e}")

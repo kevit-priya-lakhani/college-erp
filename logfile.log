@@ -1,1 +1,26 @@
-2024-08-23 13:21:21,555  * Debugger is active!
+2024-08-23 16:58:43,489  * Debugger is active!
+2024-08-23 16:59:50,842 Login attempt with email: shreya@coffiedstudent.in
+2024-08-23 16:59:50,867 Student login successful for email: shreya@coffiedstudent.in
+2024-08-23 17:00:58,602 Fetching student with ID: 66c6d45ba06378ed34107f19
+2024-08-23 17:00:58,603 Student with ID: 66c6d45ba06378ed34107f19 retrieved successfully.
+2024-08-23 17:01:06,067 Fetching all students.
+2024-08-23 17:01:06,068 All students retrieved successfully.
+2024-08-23 17:01:36,117 Authorization failed for user 66c6cf57d136c8b001b15151. Required permission: staff
+2024-08-23 17:01:36,117 Error during authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+2024-08-23 17:01:46,981 Authorization failed for user 66c6cf57d136c8b001b15151. Required permission: staff
+2024-08-23 17:01:46,981 Error during authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+2024-08-23 17:02:05,061 Logout attempt
+2024-08-23 17:02:05,061 User logged out successfully
+2024-08-23 17:02:18,621 Login attempt with email: jagruti@coffiedstaff.in
+2024-08-23 17:02:18,642 Staff login successful for email: jagruti@coffiedstaff.in
+2024-08-23 17:02:27,876 Fetching all attendance records.
+2024-08-23 17:02:27,877 Attendance records retrieved successfully.
+2024-08-23 17:02:56,504 Attempting to update student with ID: 66c6d45ba06378ed34107f19
+2024-08-23 17:02:56,526 Student with ID: 66c6d45ba06378ed34107f19 updated successfully.
+2024-08-23 17:03:13,362 Attempting to update staff member with ID: 66c6e64b8a9de9cd4503d069
+2024-08-23 17:03:13,384 Staff member with ID: 66c6e64b8a9de9cd4503d069 updated successfully.
+2024-08-23 17:03:25,379 User 66c6e64b8a9de9cd4503d069 attempted to update staff ID 66c84023cb248d9dabaa6696.
+2024-08-23 17:03:25,379 Error during update authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+2024-08-23 17:03:25,379 Error during authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+2024-08-23 17:04:45,687 Login attempt with email: qrs@coffiedstudent.in
+2024-08-23 17:04:45,688 Invalid credentials for student with email: qrs@coffiedstudent.in

@@ -30,13 +30,12 @@ app.config["OPENAPI_URL_PREFIX"] = "/"
 app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
 app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
 app.config["MONGO_URI"] =  os.environ.get("MONGO_URL")
-print(app.config["MONGO_URI"])
 mongo.init_app(app)
 
 
 api = Api(app)
 
-app.config["JWT_SECRET_KEY"]= "'9d6fce3c348e400cea42a0d9cbe727404c4835d53ac277111b2999bdd91c28ed9c5e52fc499843f800790d7954222f5e989011740540dfee22a0a67423d89e57"
+app.config["JWT_SECRET_KEY"]=  os.environ.get("JWT_KEY")
 jwt = JWTManager(app)
 
 @jwt.token_in_blocklist_loader
