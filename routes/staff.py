@@ -7,7 +7,7 @@ from flask import request
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from helper import authorize
+from helper import authorize,authorizeUpdate
 from models.schema import StaffUpdateSchema, StaffSchema
 from passlib.hash import pbkdf2_sha256
 from db import mongo
@@ -35,10 +35,12 @@ class Staff(MethodView):
         return {**staff}
     
     @jwt_required()
-    @authorize(permission= "admin")
+    @authorize(permission= "staff")
     @blp.response(200, StaffSchema)
     @blp.arguments(StaffUpdateSchema)
+    @authorizeUpdate
     def put(self,staff_data,staff_id):
+
         try:
             staff_data['password']= pbkdf2_sha256.hash(staff_data['password'])
         except:
@@ -67,7 +69,7 @@ class Staff(MethodView):
 @blp.route("/staff")
 class StaffList(MethodView):
     @jwt_required()
-    @authorize(permission= "admin")
+    @authorize(permission= "staff")
     def get(self):
         # logger.info("GET method accessed for all staffs")
         staff_list = mongo.db.staff.find()

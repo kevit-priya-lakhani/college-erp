@@ -7,6 +7,8 @@ from routes.staff import blp as StaffBlueprint
 from routes.student import blp as StudentBlueprint
 from routes.user import blp as UserBlueprint
 from routes.attendance import blp as AttendanceBlueprint
+from routes.department import blp as DepartmentBlueprint
+
 from blocklist import BLOCKLIST
 from db import mongo
 
@@ -82,3 +84,4 @@ api.register_blueprint(StaffBlueprint)
 api.register_blueprint(StudentBlueprint)
 api.register_blueprint(UserBlueprint)
 api.register_blueprint(AttendanceBlueprint)
+api.register_blueprint(DepartmentBlueprint)

@@ -64,7 +64,13 @@ class AttendanceSchema(Schema):
     date = fields.Str()
     present = fields.Boolean()
     
-
+class DepartmentSchema(Schema):
+    _id= fields.Str(load_only= True)
+    name= fields.Str(required=True,unique = True)
+    created_at= fields.Str()
+    updated_at = fields.Str()
+    
+    
 class BatchSchema(Schema):
     pass
 

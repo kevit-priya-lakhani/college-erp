@@ -93,6 +93,7 @@ class AttendanceStudent(MethodView):
         logger.info(f"Attendance records retrieved for student ID: {student_id}")
         return {"attendance": list(attendance_list)}
     
+    
 @blp.route("/attendance/<string:date>")
 class AttendanceDate(MethodView):
     """
