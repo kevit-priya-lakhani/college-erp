@@ -1,0 +1,2517 @@
+{
+	"info": {
+		"_postman_id": "f4070ff4-bb53-4553-8f6a-f0581c3327e1",
+		"name": "college-ERP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35960091"
+	},
+	"item": [
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "register staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"priya\",\n    \"email\" : \"priya@coffiedstaff.in\",\n    \"phone\" : 997854848,\n    \"dept\" : \"CE\",\n    \"is_admin\":1,\n    \"password\": \"1234\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/register/staff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"register",
+								"staff"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register staff",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"abcd\",\n    \"email\" : \"abc1d@coffiedstaff.in\",\n    \"phone\" : 997854848,\n    \"dept\" : \"CE\",\n    \"is_admin\":0,\n    \"password\": \"1234\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/register/staff",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"register",
+										"staff"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:20:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": {\n        \"$oid\": \"66c82a2827fd4d9c97213ba8\"\n    },\n    \"message\": \"Member registered\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/staff/66c6e64b8a9de9cd4503d069",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"66c6e64b8a9de9cd4503d069"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update staff as staff",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"12345\",\n    \"is_admin\":false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c6e64b8a9de9cd4503d069",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c6e64b8a9de9cd4503d069"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:28:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"{'$oid': '66c6e64b8a9de9cd4503d069'}\",\n    \"created_at\": \"{'$date': '2024-08-22T12:48:35.329Z'}\",\n    \"dept\": \"EC\",\n    \"email\": \"jagruti@coffiedstaff.in\",\n    \"is_admin\": false,\n    \"name\": \"Jag Lakhani\",\n    \"phone\": 997854848,\n    \"updated_at\": \"{'$date': '2024-08-23T12:58:08.305Z'}\"\n}"
+						},
+						{
+							"name": "update staff unauthorized",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"ABCD\",\n    \"password\": \"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c84023cb248d9dabaa6696",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c84023cb248d9dabaa6696"
+									]
+								}
+							},
+							"status": "FORBIDDEN",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:29:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 403,\n    \"message\": \"You do not have permission to update this information.\",\n    \"status\": \"Forbidden\"\n}"
+						},
+						{
+							"name": "update invalid staff",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"ABCD\",\n    \"password\": \"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c73d82a30eec74570d7111",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c73d82a30eec74570d7111"
+									]
+								}
+							},
+							"status": "NOT FOUND",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:32:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "83"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"Staff member not found.\",\n    \"status\": \"Not Found\"\n}"
+						},
+						{
+							"name": "update staff as admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"ABCD\",\n    \"password\": \"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c73da7a30eec74570d711e",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c73da7a30eec74570d711e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:51:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "278"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"{'$oid': '66c73da7a30eec74570d711e'}\",\n    \"created_at\": \"{'$date': '2024-08-22T19:01:19.709Z'}\",\n    \"dept\": \"EC\",\n    \"email\": \"abcd@coffiedstaff.in\",\n    \"is_admin\": false,\n    \"name\": \"ABCD\",\n    \"phone\": 997854848,\n    \"updated_at\": \"{'$date': '2024-08-23T13:21:42.426Z'}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/staff/66c73da7a30eec74570d711e",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"66c73da7a30eec74570d711e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete staff unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c73da7a30eec74570d711e",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c73da7a30eec74570d711e"
+									]
+								}
+							},
+							"status": "FORBIDDEN",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:09:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 403,\n    \"message\": \"You do not have the required permission.\",\n    \"status\": \"Forbidden\"\n}"
+						},
+						{
+							"name": "delete staff",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c73da7a30eec74570d711e",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c73da7a30eec74570d711e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:53:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Staff deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "index page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000"
+						}
+					},
+					"response": [
+						{
+							"name": "index page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:29:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "App is running..."
+						}
+					]
+				},
+				{
+					"name": "get staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/staff/66c73d82a30eec74570d711d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"staff",
+								"66c73d82a30eec74570d711d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get staff",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/staff/66c73d82a30eec74570d711d",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"staff",
+										"66c73d82a30eec74570d711d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:04:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"{'$oid': '66c73d82a30eec74570d711d'}\",\n    \"created_at\": \"{'$date': '2024-08-22T19:00:42.428Z'}\",\n    \"dept\": \"EC\",\n    \"email\": \"priya@coffiedstaff.in\",\n    \"is_admin\": true,\n    \"name\": \"priya Lakhani\",\n    \"phone\": 997854848\n}"
+						}
+					]
+				},
+				{
+					"name": "staff list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/staff",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staff"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "staff list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/staff",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"staff"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:08:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "947"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"staff_list\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66c6e64b8a9de9cd4503d069\"\n            },\n            \"created_at\": {\n                \"$date\": \"2024-08-22T12:48:35.329Z\"\n            },\n            \"dept\": \"EC\",\n            \"email\": \"jagruti@coffiedstaff.in\",\n            \"is_admin\": false,\n            \"name\": \"Jag Lakhani\",\n            \"password\": \"$pbkdf2-sha256$29000$v9daqzWGkJIyZixFyBmj1A$cSQZ7kr4IIUmD7WcjCU7gr6O42CCMXmfhO/hmi7wfDI\",\n            \"phone\": 997854848\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c73d82a30eec74570d711d\"\n            },\n            \"created_at\": {\n                \"$date\": \"2024-08-22T19:00:42.428Z\"\n            },\n            \"dept\": \"EC\",\n            \"email\": \"priya@coffiedstaff.in\",\n            \"is_admin\": true,\n            \"name\": \"Priya Lakhani\",\n            \"password\": \"$pbkdf2-sha256$29000$0ForhVAqBSDEGIOwFkIopQ$AVHcAelfRc4QdALaZ8qNt022bOdWHL7cmyxa/U0lSwQ\",\n            \"phone\": 997854848,\n            \"updated_at\": {\n                \"$date\": \"2024-08-23T11:37:49.034Z\"\n            }\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c73da7a30eec74570d711e\"\n            },\n            \"created_at\": {\n                \"$date\": \"2024-08-22T19:01:19.709Z\"\n            },\n            \"dept\": \"EC\",\n            \"email\": \"abcd@coffiedstaff.in\",\n            \"is_admin\": false,\n            \"name\": \"abcd\",\n            \"password\": \"$pbkdf2-sha256$29000$itFaqxXiHKOUktK613pvDQ$s72OuVuAbhabp04Eg1qKk/eNJCHsSUy75YVITuaeJSg\",\n            \"phone\": 997854848\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "register student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Diya\",\n    \"email\" : \"diya@coffiestudentst.in\",\n    \"phone\" : 997854868,\n    \"dept\" : \"ECE\",\n    \"sem\":1,\n    \"batch\":\"2021\",\n    \"password\": \"1234\"}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/register/student",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"register",
+								"student"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Shreya\",\n    \"email\" : \"shreya@coffiestudentst.in\",\n    \"phone\" : 997854868,\n    \"dept\" : \"CE\",\n    \"sem\":1,\n    \"batch\":\"2021\",\n    \"password\": \"1234\"}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/register/student",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"register",
+										"student"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:36:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": {\n        \"$oid\": \"66c82dfb525684134679e499\"\n    },\n    \"message\": \"Member registered\"\n}"
+						},
+						{
+							"name": "invalid dept",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Diya\",\n    \"email\" : \"diya@coffiestudentst.in\",\n    \"phone\" : 997854868,\n    \"dept\" : \"ECE\",\n    \"sem\":1,\n    \"batch\":\"2021\",\n    \"password\": \"1234\"}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/register/student",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"register",
+										"student"
+									]
+								}
+							},
+							"status": "FORBIDDEN",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:37:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 403,\n    \"message\": \"Forbidden, department doesn't exist\",\n    \"status\": \"Forbidden\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"email\":\"sdl@coffiestudent.com\",\n    \"name\": \"Shreya Dipak Lakhani\",\n    \"password\": \"shreyas\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/66c6d45ba06378ed34107f19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"66c6d45ba06378ed34107f19"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update student",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n    \"email\":\"sdl@coffiestudent.com\",\n    \"name\": \"Shreya Dipak Lakhani\",\n    \"password\": \"shre\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/student/66c6d45ba06378ed34107f19",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"student",
+										"66c6d45ba06378ed34107f19"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:37:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"{'$oid': '66c6d45ba06378ed34107f19'}\",\n    \"batch\": 2021,\n    \"created_at\": \"{'$date': '2024-08-22T11:32:03.012Z'}\",\n    \"dept\": \"CE\",\n    \"email\": \"sdl@coffiestudent.com\",\n    \"name\": \"Shreya Dipak Lakhani\",\n    \"phone\": 997854868,\n    \"sem\": 1,\n    \"updated_at\": \"{'$date': '2024-08-23T12:07:51.533Z'}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/66c6eb6b5008b04eaabd8947",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"66c6eb6b5008b04eaabd8947"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/student/66c6eb6b5008b04eaabd8944",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"student",
+										"66c6eb6b5008b04eaabd8944"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:38:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"student deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/student/66c6d45ba06378ed34107f19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"student",
+								"66c6d45ba06378ed34107f19"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/student/66c6d45ba06378ed34107f19",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"student",
+										"66c6d45ba06378ed34107f19"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:38:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"{'$oid': '66c6d45ba06378ed34107f19'}\",\n    \"batch\": 2021,\n    \"created_at\": \"{'$date': '2024-08-22T11:32:03.012Z'}\",\n    \"dept\": \"CE\",\n    \"email\": \"sdl@coffiestudent.com\",\n    \"name\": \"Shreya Dipak Lakhani\",\n    \"phone\": 997854868,\n    \"sem\": 1,\n    \"updated_at\": \"{'$date': '2024-08-23T12:07:51.533Z'}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "student list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "student list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/student",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:38:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1780"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"student_list\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66c6cf57d136c8b001b15151\"\n            },\n            \"batch\": 2021,\n            \"created_at\": {\n                \"$date\": \"2024-08-22T11:10:39.937Z\"\n            },\n            \"dept\": \"CE\",\n            \"email\": \"shreya@coffiedstudent.in\",\n            \"name\": \"Shreya Lakhani\",\n            \"password\": \"$pbkdf2-sha256$29000$v5dSCgGg9P7/3/u/V4rRGg$FBsEECxMPH3bWfHbv/RoXbkqj1Z6Q6T1qVdeKZcTH.E\",\n            \"phone\": 997854868,\n            \"sem\": 1\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c6d45ba06378ed34107f19\"\n            },\n            \"batch\": 2021,\n            \"created_at\": {\n                \"$date\": \"2024-08-22T11:32:03.012Z\"\n            },\n            \"dept\": \"CE\",\n            \"email\": \"sdl@coffiestudent.com\",\n            \"name\": \"Shreya Dipak Lakhani\",\n            \"password\": \"$pbkdf2-sha256$29000$vxdi7N3bG2PMee9dC.E8hw$Kfi841Zw2XzENukntUi/fg45wf8vGPx1X6C/jTv37k0\",\n            \"phone\": 997854868,\n            \"sem\": 1,\n            \"updated_at\": {\n                \"$date\": \"2024-08-23T12:07:51.533Z\"\n            }\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c73cbdbf6a67c64ee5ac7e\"\n            },\n            \"batch\": 2021,\n            \"created_at\": {\n                \"$date\": \"2024-08-22T18:57:25.096Z\"\n            },\n            \"dept\": \"CE\",\n            \"email\": \"shr@coffiestudentst.in\",\n            \"name\": \"Shreya Lakhani\",\n            \"password\": \"$pbkdf2-sha256$29000$bs05B4AwhrA2Rghh7L0XIg$cdYnP5GWOyOLUdx86DUI6KWVgXirmnQi6u4E3Q//yJY\",\n            \"phone\": 997854868,\n            \"sem\": 1\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c82dfb525684134679e499\"\n            },\n            \"batch\": 2021,\n            \"created_at\": {\n                \"$date\": \"2024-08-23T12:06:43.712Z\"\n            },\n            \"dept\": \"CE\",\n            \"email\": \"shreya@coffiestudentst.in\",\n            \"name\": \"Shreya\",\n            \"password\": \"$pbkdf2-sha256$29000$9l6L8X7PmVOKsVYKAWCMsQ$1AmB/0FWuGq5cMAwF8R3WqK.80cMQQ.VMQ4ruU8o9tg\",\n            \"phone\": 997854868,\n            \"sem\": 1\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "attendance",
+			"item": [
+				{
+					"name": "post attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/attendance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attendance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post attendance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/attendance",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:38:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Attendance data updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "post attendance Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/attendance/01-01-2021/66c6cf57d136c8b001b15151",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attendance",
+								"01-01-2021",
+								"66c6cf57d136c8b001b15151"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post attendance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/attendance",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:38:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Attendance data updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get attendance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/attendance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attendance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get attendance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/attendance",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:39:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "646"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"attendance\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66c72aa93d534be62aca6eb8\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c72fbdc002c89ae845277c\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"66c6cf57d136c8b001b15151\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c82e7a525684134679e49a\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"66c6cf57d136c8b001b15151\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "find by student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/attendance/66c6cf57d136c8b001b15151",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attendance",
+								"66c6cf57d136c8b001b15151"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find by student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/attendance/66c6cf57d136c8b001b15151",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"attendance",
+										"66c6cf57d136c8b001b15151"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:39:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "455"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"attendance\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66c72fbdc002c89ae845277c\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"66c6cf57d136c8b001b15151\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c82e7a525684134679e49a\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"66c6cf57d136c8b001b15151\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "department list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/department",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "department list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/department",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:39:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "279"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"department_list\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66c82987d6b116e4379d72e9\"\n            },\n            \"created_at\": {\n                \"$date\": \"2024-08-23T11:47:43.466Z\"\n            },\n            \"name\": \"CE\",\n            \"updated_at\": {\n                \"$date\": \"2024-08-23T11:54:36.408Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "new department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"CE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new department",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"CE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/department",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:39:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department data added successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"CE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/CE",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"CE"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update department",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"CE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/department/CE",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department",
+										"CE"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:39:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created_at\": \"{'$date': '2024-08-23T11:47:43.466Z'}\",\n    \"name\": \"CE\",\n    \"updated_at\": \"{'$date': '2024-08-23T12:09:48.091Z'}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get department",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"CE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/CE",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"CE"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get department",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"CE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/department/CE",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department",
+										"CE"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:39:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created_at\": \"{'$date': '2024-08-23T11:47:43.466Z'}\",\n    \"name\": \"CE\",\n    \"updated_at\": \"{'$date': '2024-08-23T12:09:48.091Z'}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"CE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/department/CE",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"department",
+								"CE"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete department",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"CE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/department/CE",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"department",
+										"CE"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:40:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Department deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "refresh",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let res = pm.response.json()",
+									"if(res['access_token']){",
+									"pm.environment.set(\"access_token\", res['access_token']);",
+									"}",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{refresh_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/refresh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let res = pm.response.json()",
+									"if(res['access_token']){",
+									"pm.environment.set(\"access_token\", res['access_token']);",
+									"pm.environment.set(\"refresh_token\", res['refresh_token']);",
+									"",
+									"}",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"priya@coffiedstaff.in\",\n    \"password\":\"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"shreya@coffiedstudent.in\",\n    \"password\":\"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:41:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "730"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzI0Mzk1Mjg2LCJqdGkiOiIwMmY4OTcyYy05ZTNiLTRkM2YtOGFjZC0xNzFiOWFiODdhYzkiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiNjZjNmNmNTdkMTM2YzhiMDAxYjE1MTUxIiwibmJmIjoxNzI0Mzk1Mjg2LCJleHAiOjE3MjQzOTYxODYsImlzX2FkbWluIjpmYWxzZX0.rQ6GPPy-18YaGMjg-kbPzlkbaQc2xbvxl69reibyjlM\",\n    \"message\": \"Student logged in successfully\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNDM5NTI4NiwianRpIjoiOWZlYzFmODItYWEzZi00YjYzLWExODktZjYyOWE5MzY1MGI0IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiI2NmM2Y2Y1N2QxMzZjOGIwMDFiMTUxNTEiLCJuYmYiOjE3MjQzOTUyODYsImV4cCI6MTcyNjk4NzI4NiwiaXNfYWRtaW4iOmZhbHNlfQ.cUTAjShCh4-U_9V_5xJ2pvKZug90f9kjtI0jAD1gyg4\"\n}"
+						},
+						{
+							"name": "login invalid  cred",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"qrs@coffiedstudent.in\",\n    \"password\":\"134\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:41:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "730"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzI0Mzk1Mjg2LCJqdGkiOiIwMmY4OTcyYy05ZTNiLTRkM2YtOGFjZC0xNzFiOWFiODdhYzkiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiNjZjNmNmNTdkMTM2YzhiMDAxYjE1MTUxIiwibmJmIjoxNzI0Mzk1Mjg2LCJleHAiOjE3MjQzOTYxODYsImlzX2FkbWluIjpmYWxzZX0.rQ6GPPy-18YaGMjg-kbPzlkbaQc2xbvxl69reibyjlM\",\n    \"message\": \"Student logged in successfully\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNDM5NTI4NiwianRpIjoiOWZlYzFmODItYWEzZi00YjYzLWExODktZjYyOWE5MzY1MGI0IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiI2NmM2Y2Y1N2QxMzZjOGIwMDFiMTUxNTEiLCJuYmYiOjE3MjQzOTUyODYsImV4cCI6MTcyNjk4NzI4NiwiaXNfYWRtaW4iOmZhbHNlfQ.cUTAjShCh4-U_9V_5xJ2pvKZug90f9kjtI0jAD1gyg4\"\n}"
+						},
+						{
+							"name": "login staff",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"jagruti@coffiedstaff.in\",\n    \"password\":\"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:37:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "728"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzI0Mzk4NjIyLCJqdGkiOiIxZTA2OGQ1ZS1hNmZjLTQ1OWUtOTMyZS1lN2M2NjE3NTViNTIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiNjZjNmU2NGI4YTlkZTljZDQ1MDNkMDY5IiwibmJmIjoxNzI0Mzk4NjIyLCJleHAiOjE3MjQzOTk1MjIsImlzX2FkbWluIjpmYWxzZX0.5MyTlpuZTp-0PaB3v0fbNFTadhZL4l68LpDDgwCgnNE\",\n    \"message\": \"Staff logged in successfully\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNDM5ODYyMiwianRpIjoiY2I1NzBlZjAtOWIwNy00N2FjLWJmMGMtNGFhYjczZTBhZWM4IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiI2NmM2ZTY0YjhhOWRlOWNkNDUwM2QwNjkiLCJuYmYiOjE3MjQzOTg2MjIsImV4cCI6MTcyNjk5MDYyMiwiaXNfYWRtaW4iOmZhbHNlfQ.t1uFruE7iDH8mdRjF3aPMKZKXZ_BadkC9AtohkdLlA8\"\n}"
+						},
+						{
+							"name": "login admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"priya@coffiedstaff.in\",\n    \"password\":\"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 07:44:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "728"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNzI0Mzk5MDczLCJqdGkiOiJiZWQyMDM5MS0wZDdiLTQwYTUtOTVlYy04OWJmYzZmMTg1YTgiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiNjZjODNkYzhhMzM0OGM3NGNkNzg3OTkwIiwibmJmIjoxNzI0Mzk5MDczLCJleHAiOjE3MjQzOTk5NzMsImlzX2FkbWluIjpmYWxzZX0.TQ-x6Lbj31-1gSnXurnfeMPe09SlPkt9ije60NxCCaU\",\n    \"message\": \"Staff logged in successfully\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNDM5OTA3MywianRpIjoiOGQwYmNlYTYtOTJmMy00M2M5LTgwNjQtOGE1ZGJmZjhiM2Y0IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiI2NmM4M2RjOGEzMzQ4Yzc0Y2Q3ODc5OTAiLCJuYmYiOjE3MjQzOTkwNzMsImV4cCI6MTcyNjk5MTA3MywiaXNfYWRtaW4iOmZhbHNlfQ.ffMpVs39j5NyKvmYUBf30MBXf1XZ3q0oXtGDFz_QR9k\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Aug 2024 06:41:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
