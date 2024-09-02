@@ -8,6 +8,7 @@ from routes.student import blp as StudentBlueprint
 from routes.user import blp as UserBlueprint
 from routes.attendance import blp as AttendanceBlueprint
 from routes.department import blp as DepartmentBlueprint
+from routes.analytics import blp as AnalyticsBlueprint
 from blocklist import BLOCKLIST
 from db import mongo
 import logging
@@ -151,6 +152,7 @@ api.register_blueprint(StudentBlueprint)
 api.register_blueprint(UserBlueprint)
 api.register_blueprint(AttendanceBlueprint)
 api.register_blueprint(DepartmentBlueprint)
+api.register_blueprint(AnalyticsBlueprint)
 
 # Log the successful startup of the application
 logger.info("Flask application has started successfully")

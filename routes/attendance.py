@@ -3,10 +3,12 @@ from email import message
 from importlib.metadata import MetadataPathFinder
 import json
 from os import access
+import trace
 from bson import ObjectId, json_util
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
+from flask import request
 from helper import authorize, authorizeUpdate
 from models.schema import AttendanceSchema
 from db import mongo
@@ -42,8 +44,8 @@ class Attendance(MethodView):
     
     @jwt_required()
     @authorize(permission="admin")
-    @blp.arguments(AttendanceSchema)
-    def post(self, attendance_data):
+    # @blp.arguments(AttendanceSchema)
+    def post(self):
         """
         Add a new attendance record to the database.
 
@@ -58,9 +60,15 @@ class Attendance(MethodView):
         """
         logger.info("Attempting to add new attendance data.")
         try:
-            attendance_data['date'] = datetime.datetime.strptime(attendance_data['date'], f"%d-%m-%Y")
-            print(attendance_data['date'])
-            mongo.db.attendance.insert_one(attendance_data)
+            attendance_data = request.json
+            for data in attendance_data['data']:
+                data['date'] = datetime.datetime.strptime(data['date'], f"%d-%m-%Y")
+                data['student_id']= ObjectId(data['student_id'])
+                if data['date'].weekday() in (5, 6):
+                    logger.info("Entry not allowed on weekends.")
+                    abort(400, message="Entry not allowed on weekends.")
+            # print(attendance_data['date'])
+            mongo.db.attendance.insert_many(attendance_data['data'])
             logger.info("Attendance data added successfully.")
             return {"message": "Attendance data added successfully"}
         except Exception as e:

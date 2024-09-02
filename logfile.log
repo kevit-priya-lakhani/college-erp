@@ -1,26 +1,14 @@
-2024-08-23 16:58:43,489  * Debugger is active!
-2024-08-23 16:59:50,842 Login attempt with email: shreya@coffiedstudent.in
-2024-08-23 16:59:50,867 Student login successful for email: shreya@coffiedstudent.in
-2024-08-23 17:00:58,602 Fetching student with ID: 66c6d45ba06378ed34107f19
-2024-08-23 17:00:58,603 Student with ID: 66c6d45ba06378ed34107f19 retrieved successfully.
-2024-08-23 17:01:06,067 Fetching all students.
-2024-08-23 17:01:06,068 All students retrieved successfully.
-2024-08-23 17:01:36,117 Authorization failed for user 66c6cf57d136c8b001b15151. Required permission: staff
-2024-08-23 17:01:36,117 Error during authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
-2024-08-23 17:01:46,981 Authorization failed for user 66c6cf57d136c8b001b15151. Required permission: staff
-2024-08-23 17:01:46,981 Error during authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
-2024-08-23 17:02:05,061 Logout attempt
-2024-08-23 17:02:05,061 User logged out successfully
-2024-08-23 17:02:18,621 Login attempt with email: jagruti@coffiedstaff.in
-2024-08-23 17:02:18,642 Staff login successful for email: jagruti@coffiedstaff.in
-2024-08-23 17:02:27,876 Fetching all attendance records.
-2024-08-23 17:02:27,877 Attendance records retrieved successfully.
-2024-08-23 17:02:56,504 Attempting to update student with ID: 66c6d45ba06378ed34107f19
-2024-08-23 17:02:56,526 Student with ID: 66c6d45ba06378ed34107f19 updated successfully.
-2024-08-23 17:03:13,362 Attempting to update staff member with ID: 66c6e64b8a9de9cd4503d069
-2024-08-23 17:03:13,384 Staff member with ID: 66c6e64b8a9de9cd4503d069 updated successfully.
-2024-08-23 17:03:25,379 User 66c6e64b8a9de9cd4503d069 attempted to update staff ID 66c84023cb248d9dabaa6696.
-2024-08-23 17:03:25,379 Error during update authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
-2024-08-23 17:03:25,379 Error during authorization: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
-2024-08-23 17:04:45,687 Login attempt with email: qrs@coffiedstudent.in
-2024-08-23 17:04:45,688 Invalid credentials for student with email: qrs@coffiedstudent.in
+2024-09-02 17:10:57,948 Flask application has started successfully
+2024-09-02 17:10:57,951  * Debugger is active!
+2024-09-02 17:11:00,447 Checking if token is in blocklist
+2024-09-02 17:11:00,447 Checking if token is in blocklist
+2024-09-02 17:11:00,451 User details: {'_id': ObjectId('66c83dc8a3348c74cd787990'), 'name': 'priya', 'email': 'priya@coffiedstaff.in', 'phone': 997854848, 'dept': 'CE', 'is_admin': True, 'password': '$pbkdf2-sha256$29000$uBeiVAohROh9r1VKKcW49w$KjkgLFTY.UfzREDg5Q6LyBC92dEhl2irRTHuKpNsJZk', 'created_at': datetime.datetime(2024, 8, 23, 13, 14, 8, 736000)}
+2024-09-02 17:11:00,451 Attempting to add new attendance data.
+2024-09-02 17:11:00,452 Entry not allowed on weekends.
+2024-09-02 17:11:00,452 An error occurred while inserting attendance data: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-09-02 17:11:00,452 Error during authorization: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-09-02 17:11:37,422 Checking if token is in blocklist
+2024-09-02 17:11:37,423 Checking if token is in blocklist
+2024-09-02 17:11:37,424 User details: {'_id': ObjectId('66c83dc8a3348c74cd787990'), 'name': 'priya', 'email': 'priya@coffiedstaff.in', 'phone': 997854848, 'dept': 'CE', 'is_admin': True, 'password': '$pbkdf2-sha256$29000$uBeiVAohROh9r1VKKcW49w$KjkgLFTY.UfzREDg5Q6LyBC92dEhl2irRTHuKpNsJZk', 'created_at': datetime.datetime(2024, 8, 23, 13, 14, 8, 736000)}
+2024-09-02 17:11:37,424 Attempting to add new attendance data.
+2024-09-02 17:11:37,425 Attendance data added successfully.
