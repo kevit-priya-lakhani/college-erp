@@ -34,7 +34,7 @@ class AnalysisTask1(MethodView):
                         "branches": {
                             "$push": {
                                 "k": "$_id.dept",
-                                "v": {"studentCount": "$students_count"},
+                                "v": "$students_count",
                             }
                         },
                     }
@@ -44,7 +44,7 @@ class AnalysisTask1(MethodView):
                         "_id": 0,
                         "batch": "$_id.year",
                         "totalStudents": 1,
-                        "branches": {"$arrayToObject": "$branches"},
+                        "studentCount": {"$arrayToObject": "$branches"},
                     }
                 },
             ]
