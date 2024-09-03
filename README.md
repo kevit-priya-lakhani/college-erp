@@ -1,3 +1,7 @@
+Here's an updated version of the README file with the analytics section included:
+
+---
+
 ### College-ERP Project
 
 Welcome to the College-ERP Project! This project is a comprehensive web-based application built using Flask and PyMongo. It aims to streamline and manage various aspects of a college's operations, including student management, staff management, attendance tracking, and department management. The application includes secure authentication mechanisms and is designed to be easily extensible.
@@ -29,7 +33,13 @@ Welcome to the College-ERP Project! This project is a comprehensive web-based ap
    - Add and manage different departments within the college.
    - Assign staff and students to respective departments.
 
-### 6. **Comprehensive API Documentation**
+### 6. **Analytics**
+   - **Year-wise Student Count:** Retrieve total students per batch year and department.
+   - **Absentee Students:** Analyze absentee data on specific dates, filtered by batch, department, and semester.
+   - **Low Attendance:** Identify students with attendance below 75%, up to a specified date.
+   - **Batch and Department-wise Count:** Get student count per batch and department, including intake statistics.
+
+### 7. **Comprehensive API Documentation**
    - **Swagger UI**: Interactive API documentation using Swagger UI, making it easy to test and explore the API.
 
 ---
@@ -44,7 +54,8 @@ College-ERP/
 │   ├── student.py              # Routes for student management
 │   ├── user.py                 # Routes for user authentication (login/logout)
 │   ├── attendance.py           # Routes for attendance management
-│   └── department.py           # Routes for department management
+│   ├── department.py           # Routes for department management
+│   └── analytics.py            # Routes for analytics
 │
 ├── models/
 │   └── schema.py               # Database schemas and data validation using Marshmallow
@@ -164,6 +175,23 @@ College-ERP/
     }
     ```
 
+### **Analytics**
+
+- **Year-wise Student Count:**
+  - Endpoint: `GET /analytics/q1`
+
+- **Absentee Students:**
+  - Endpoint: `POST /analytics/q2`
+  - Payload: Specify `date`, with optional `batch`, `dept`, and `sem` filters.
+
+- **Low Attendance:**
+  - Endpoint: `POST /analytics/q3`
+  - Payload: Specify `date`, with optional `batch`, `dept`, and `sem` filters.
+
+- **Batch and Department-wise Count:**
+  - Endpoint: `POST /analytics/q4`
+  - Payload: Specify `batch` and `dept` if needed.
+
 ---
 
 ## Logging
@@ -184,10 +212,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-## Contact
-
-For any inquiries or support, please contact [your-email@example.com].
-
----
 
 Thank you for using the College-ERP Project! We hope it helps streamline your college operations effectively.
