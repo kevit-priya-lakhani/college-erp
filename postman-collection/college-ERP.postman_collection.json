@@ -785,7 +785,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Diya\",\n    \"email\" : \"diya@coffiestudentst.in\",\n    \"phone\" : 997854868,\n    \"dept\" : \"ECE\",\n    \"sem\":1,\n    \"batch\":\"2021\",\n    \"password\": \"1234\"}\n",
+							"raw": "{\n    \"name\": \"Crystal\",\n    \"email\" : \"crystal@coffiestudentst.in\",\n    \"phone\" : 879765484,\n    \"dept\" : \"EC\",\n    \"sem\":1,\n    \"batch\":\"2019\",\n    \"password\": \"rgrg\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1305,7 +1305,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":1\n}",
+							"raw": "{\n    \"data\":[\n    {\n        \"student_id\": \"66d53f1267fa64dbc47f20f8\",\n        \"date\": \"03-03-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"09-06-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53e7d67fa64dbc47f20f2\",\n        \"date\": \"25-09-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"15-05-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"16-09-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"27-02-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"13-05-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"29-05-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53e7d67fa64dbc47f20f2\",\n        \"date\": \"25-09-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"15-04-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"03-05-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"17-03-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"18-01-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"17-09-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"27-08-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"05-04-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"30-01-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f1267fa64dbc47f20f8\",\n        \"date\": \"09-02-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"16-12-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ea067fa64dbc47f20f3\",\n        \"date\": \"01-07-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"25-03-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ea067fa64dbc47f20f3\",\n        \"date\": \"17-02-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f1267fa64dbc47f20f8\",\n        \"date\": \"27-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f0267fa64dbc47f20f7\",\n        \"date\": \"30-07-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"30-08-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"18-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f0267fa64dbc47f20f7\",\n        \"date\": \"30-08-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"12-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53eb467fa64dbc47f20f4\",\n        \"date\": \"24-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"12-07-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"25-03-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53eb467fa64dbc47f20f4\",\n        \"date\": \"29-09-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"23-06-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ee867fa64dbc47f20f6\",\n        \"date\": \"17-03-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ee867fa64dbc47f20f6\",\n        \"date\": \"28-06-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"04-04-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"27-02-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"15-01-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53eb467fa64dbc47f20f4\",\n        \"date\": \"05-06-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"06-04-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"15-12-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ea067fa64dbc47f20f3\",\n        \"date\": \"20-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53eb467fa64dbc47f20f4\",\n        \"date\": \"26-06-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f0267fa64dbc47f20f7\",\n        \"date\": \"08-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53eb467fa64dbc47f20f4\",\n        \"date\": \"15-11-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"29-03-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53e7d67fa64dbc47f20f2\",\n        \"date\": \"18-08-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"14-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"24-09-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"25-03-2020\",\n        \"present\": 1\n    }\n]\n}\n   ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1330,7 +1330,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":1\n}",
+									"raw": "{ \"data\":[\n    {\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"07-09-2024\",\n    \"present\":1\n    }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1374,6 +1374,58 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Attendance data updated successfully\"\n}"
+						},
+						{
+							"name": "post attendance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\":[\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"13-11-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"10-03-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f0267fa64dbc47f20f7\",\n        \"date\": \"05-08-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53e7d67fa64dbc47f20f2\",\n        \"date\": \"20-06-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"04-06-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"22-03-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"25-12-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"01-04-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ea067fa64dbc47f20f3\",\n        \"date\": \"02-09-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"22-11-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"19-07-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"04-04-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"01-11-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"19-01-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"12-08-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"19-04-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"01-05-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"19-07-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"21-09-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"23-05-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"21-04-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53e7d67fa64dbc47f20f2\",\n        \"date\": \"01-10-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"27-03-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"28-12-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"08-08-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"24-10-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"07-09-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"06-06-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"30-11-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"08-05-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"25-09-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"10-02-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"04-02-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"20-05-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f0267fa64dbc47f20f7\",\n        \"date\": \"17-07-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f1267fa64dbc47f20f8\",\n        \"date\": \"23-06-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66c73cbdbf6a67c64ee5ac7e\",\n        \"date\": \"29-08-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"16-08-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ea067fa64dbc47f20f3\",\n        \"date\": \"23-04-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53eb467fa64dbc47f20f4\",\n        \"date\": \"14-08-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"13-11-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53e7d67fa64dbc47f20f2\",\n        \"date\": \"31-07-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ff567fa64dbc47f20fe\",\n        \"date\": \"06-01-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"09-04-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ea067fa64dbc47f20f3\",\n        \"date\": \"20-02-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f5667fa64dbc47f20fb\",\n        \"date\": \"13-02-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d5400367fa64dbc47f20ff\",\n        \"date\": \"05-05-2019\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f2967fa64dbc47f20f9\",\n        \"date\": \"17-08-2020\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53ed167fa64dbc47f20f5\",\n        \"date\": \"07-10-2021\",\n        \"present\": 1\n    },\n    {\n        \"student_id\": \"66d53f4167fa64dbc47f20fa\",\n        \"date\": \"28-11-2020\",\n        \"present\": 1\n    }\n]\n}\n   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/attendance",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 10:28:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Attendance data added successfully\"\n}"
 						}
 					]
 				},
@@ -1632,6 +1684,42 @@
 							"body": "{\n    \"attendance\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66c72fbdc002c89ae845277c\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"66c6cf57d136c8b001b15151\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c82e7a525684134679e49a\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-01T00:00:00Z\"\n            },\n            \"present\": true,\n            \"student_id\": \"66c6cf57d136c8b001b15151\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "{{url}}/attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\":[\n    {\n    \"student_id\":\"66c6cf57d136c8b001b15151\",\n    \"date\":\"01-01-2021\",\n    \"present\":1\n    }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/attendance",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"attendance"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1726,7 +1814,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"CE\"\n}",
+							"raw": "{\n    \"name\":\"EC\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2159,7 +2247,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\":\"priya@coffiedstaff.in\",\n    \"password\":\"12345\"\n}",
+							"raw": "{\n    \"email\":\"priya@coffiedstaff.in\",\n    \"password\":\"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2508,6 +2596,675 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Analytics",
+			"item": [
+				{
+					"name": "Task 1: Batch and department-wise student count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/analytics/q1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"analytics",
+								"q1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Task 1: Batch and department-wise student count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/analytics/q1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Sep 2024 09:58:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "467"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"yearly student analytics\": [\n        {\n            \"batch\": 2019,\n            \"studentCount\": {\n                \"CE\": 5,\n                \"EC\": 6,\n                \"ME\": 3\n            },\n            \"totalStudents\": 14\n        },\n        {\n            \"batch\": 2021,\n            \"studentCount\": {\n                \"CE\": 3,\n                \"EC\": 3,\n                \"ME\": 2\n            },\n            \"totalStudents\": 8\n        },\n        {\n            \"batch\": 2020,\n            \"studentCount\": {\n                \"CE\": 3,\n                \"EC\": 4,\n                \"ME\": 5\n            },\n            \"totalStudents\": 12\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Task 2: absentee analytics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\":\"03-01-2021\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/analytics/q2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"analytics",
+								"q2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "department-wise",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"03-01-2021\",\n    \"dept\":\"EC\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 09:33:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "777"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"yearly student analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d5688942dd9cdbb6962673\"\n            },\n            \"date\": {\n                \"$date\": \"2021-04-14T00:00:00Z\"\n            },\n            \"present\": 0,\n            \"result\": [\n                {\n                    \"_id\": {\n                        \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n                    },\n                    \"batch\": 2020,\n                    \"created_at\": {\n                        \"$date\": \"2024-09-02T09:59:06.327Z\"\n                    },\n                    \"dept\": \"CE\",\n                    \"email\": \"jenish@coffiestudentst.in\",\n                    \"name\": \"Jenish\",\n                    \"password\": \"$pbkdf2-sha256$29000$9X7v/Z.TklJqjfHeW2ttDQ$0nwZG3WJfRretnuka/hx2znMX6GGrdhMLGpna3p/uXQ\",\n                    \"phone\": 877465484,\n                    \"sem\": 1\n                }\n            ],\n            \"student_id\": {\n                \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "batch-wise",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"14-04-2021\",\n    \"batch\":2020\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Sep 2024 07:45:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "777"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"absent student analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d5688942dd9cdbb6962673\"\n            },\n            \"date\": {\n                \"$date\": \"2021-04-14T00:00:00Z\"\n            },\n            \"present\": 0,\n            \"result\": [\n                {\n                    \"_id\": {\n                        \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n                    },\n                    \"batch\": 2020,\n                    \"created_at\": {\n                        \"$date\": \"2024-09-02T09:59:06.327Z\"\n                    },\n                    \"dept\": \"CE\",\n                    \"email\": \"jenish@coffiestudentst.in\",\n                    \"name\": \"Jenish\",\n                    \"password\": \"$pbkdf2-sha256$29000$9X7v/Z.TklJqjfHeW2ttDQ$0nwZG3WJfRretnuka/hx2znMX6GGrdhMLGpna3p/uXQ\",\n                    \"phone\": 877465484,\n                    \"sem\": 1\n                }\n            ],\n            \"student_id\": {\n                \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Task 2:",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"03-01-2021\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Sep 2024 07:48:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "779"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"absent student analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d565f52e75f6d4a7538134\"\n            },\n            \"date\": {\n                \"$date\": \"2021-01-03T00:00:00Z\"\n            },\n            \"present\": 0,\n            \"result\": [\n                {\n                    \"_id\": {\n                        \"$oid\": \"66d541e667fa64dbc47f2114\"\n                    },\n                    \"batch\": 2019,\n                    \"created_at\": {\n                        \"$date\": \"2024-09-02T10:11:10.734Z\"\n                    },\n                    \"dept\": \"EC\",\n                    \"email\": \"crystal@coffiestudentst.in\",\n                    \"name\": \"Crystal\",\n                    \"password\": \"$pbkdf2-sha256$29000$7t27d05pbU3JeY8xJmSM8Q$pZMjhq2ttvlpJivXzD.ScmJIubM7XCy4M3g.0OT7kSU\",\n                    \"phone\": 879765484,\n                    \"sem\": 1\n                }\n            ],\n            \"student_id\": {\n                \"$oid\": \"66d541e667fa64dbc47f2114\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Task 3 : less than 75% attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\":\"01-01-2022\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/analytics/q3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"analytics",
+								"q3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "batch-wise",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"01-01-2022\",\n    \"batch\":2019\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 11:12:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "950"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"low attendance analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d53e7d67fa64dbc47f20f2\"\n            },\n            \"attendance\": 0.5833333333333334\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d5400367fa64dbc47f20ff\"\n            },\n            \"attendance\": 0.6896551724137931\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ff567fa64dbc47f20fe\"\n            },\n            \"attendance\": 0.75\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d541e667fa64dbc47f2114\"\n            },\n            \"attendance\": 0.5\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53eb467fa64dbc47f20f4\"\n            },\n            \"attendance\": 0.6363636363636364\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ea067fa64dbc47f20f3\"\n            },\n            \"attendance\": 0.6666666666666666\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ed167fa64dbc47f20f5\"\n            },\n            \"attendance\": 0.7391304347826086\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ee867fa64dbc47f20f6\"\n            },\n            \"attendance\": 0.6875\n        }\n    ]\n}"
+						},
+						{
+							"name": "semester-wise",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"01-01-2022\",\n    \"sem\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 11:12:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "950"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"low attendance analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d53e7d67fa64dbc47f20f2\"\n            },\n            \"attendance\": 0.5833333333333334\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d5400367fa64dbc47f20ff\"\n            },\n            \"attendance\": 0.6896551724137931\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ff567fa64dbc47f20fe\"\n            },\n            \"attendance\": 0.75\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d541e667fa64dbc47f2114\"\n            },\n            \"attendance\": 0.5\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53eb467fa64dbc47f20f4\"\n            },\n            \"attendance\": 0.6363636363636364\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ea067fa64dbc47f20f3\"\n            },\n            \"attendance\": 0.6666666666666666\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ed167fa64dbc47f20f5\"\n            },\n            \"attendance\": 0.7391304347826086\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ee867fa64dbc47f20f6\"\n            },\n            \"attendance\": 0.6875\n        }\n    ]\n}"
+						},
+						{
+							"name": "department-wise",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"01-01-2020\",\n    \"dept\":\"ME\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 11:15:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"low attendance analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d5400367fa64dbc47f20ff\"\n            },\n            \"attendance\": 0.7272727272727273\n        }\n    ]\n}"
+						},
+						{
+							"name": "general",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\":\"03-12-2021\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 11:16:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1546"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"low attendance analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d53e7d67fa64dbc47f20f2\"\n            },\n            \"attendance\": 0.5833333333333334\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53f0267fa64dbc47f20f7\"\n            },\n            \"attendance\": 0.7142857142857143\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ee867fa64dbc47f20f6\"\n            },\n            \"attendance\": 0.6875\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53f5667fa64dbc47f20fb\"\n            },\n            \"attendance\": 0.7083333333333334\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d541e667fa64dbc47f2114\"\n            },\n            \"attendance\": 0.5\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53f2967fa64dbc47f20f9\"\n            },\n            \"attendance\": 0.6818181818181818\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66c73cbdbf6a67c64ee5ac7e\"\n            },\n            \"attendance\": 0.7352941176470589\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d5400367fa64dbc47f20ff\"\n            },\n            \"attendance\": 0.6896551724137931\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ed167fa64dbc47f20f5\"\n            },\n            \"attendance\": 0.7391304347826086\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ff567fa64dbc47f20fe\"\n            },\n            \"attendance\": 0.75\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n            },\n            \"attendance\": 0.47368421052631576\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53ea067fa64dbc47f20f3\"\n            },\n            \"attendance\": 0.6666666666666666\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"66d53eb467fa64dbc47f20f4\"\n            },\n            \"attendance\": 0.6363636363636364\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Task 4: Student count analylics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/analytics/q4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"analytics",
+								"q4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "batch-wise",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"batch\":2020\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2024 09:33:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "777"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"yearly student analytics\": [\n        {\n            \"_id\": {\n                \"$oid\": \"66d5688942dd9cdbb6962673\"\n            },\n            \"date\": {\n                \"$date\": \"2021-04-14T00:00:00Z\"\n            },\n            \"present\": 0,\n            \"result\": [\n                {\n                    \"_id\": {\n                        \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n                    },\n                    \"batch\": 2020,\n                    \"created_at\": {\n                        \"$date\": \"2024-09-02T09:59:06.327Z\"\n                    },\n                    \"dept\": \"CE\",\n                    \"email\": \"jenish@coffiestudentst.in\",\n                    \"name\": \"Jenish\",\n                    \"password\": \"$pbkdf2-sha256$29000$9X7v/Z.TklJqjfHeW2ttDQ$0nwZG3WJfRretnuka/hx2znMX6GGrdhMLGpna3p/uXQ\",\n                    \"phone\": 877465484,\n                    \"sem\": 1\n                }\n            ],\n            \"student_id\": {\n                \"$oid\": \"66d53f1267fa64dbc47f20f8\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "Task 4",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/analytics/q4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"analytics",
+										"q4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.0.1 Python/3.10.12"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Sep 2024 07:38:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1639"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"student count analytics\": [\n        {\n            \"availableIntake\": 292,\n            \"batch\": 2021,\n            \"branches\": {\n                \"CE\": {\n                    \"availableIntake\": 117,\n                    \"totalStudents\": 3,\n                    \"totalStudentsIntake\": 120\n                },\n                \"EC\": {\n                    \"availableIntake\": 57,\n                    \"totalStudents\": 3,\n                    \"totalStudentsIntake\": 60\n                },\n                \"ME\": {\n                    \"availableIntake\": 118,\n                    \"totalStudents\": 2,\n                    \"totalStudentsIntake\": 120\n                }\n            },\n            \"totalStudents\": 8,\n            \"totalStudentsIntake\": 300\n        },\n        {\n            \"availableIntake\": 406,\n            \"batch\": 2019,\n            \"branches\": {\n                \"CE\": {\n                    \"availableIntake\": 235,\n                    \"totalStudents\": 5,\n                    \"totalStudentsIntake\": 240\n                },\n                \"EC\": {\n                    \"availableIntake\": 54,\n                    \"totalStudents\": 6,\n                    \"totalStudentsIntake\": 60\n                },\n                \"ME\": {\n                    \"availableIntake\": 117,\n                    \"totalStudents\": 3,\n                    \"totalStudentsIntake\": 120\n                }\n            },\n            \"totalStudents\": 14,\n            \"totalStudentsIntake\": 420\n        },\n        {\n            \"availableIntake\": 408,\n            \"batch\": 2020,\n            \"branches\": {\n                \"CE\": {\n                    \"availableIntake\": 117,\n                    \"totalStudents\": 3,\n                    \"totalStudentsIntake\": 120\n                },\n                \"EC\": {\n                    \"availableIntake\": 56,\n                    \"totalStudents\": 4,\n                    \"totalStudentsIntake\": 60\n                },\n                \"ME\": {\n                    \"availableIntake\": 235,\n                    \"totalStudents\": 5,\n                    \"totalStudentsIntake\": 240\n                }\n            },\n            \"totalStudents\": 12,\n            \"totalStudentsIntake\": 420\n        }\n    ]\n}"
 						}
 					]
 				}
