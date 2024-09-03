@@ -1,14 +1,1 @@
-2024-09-02 17:10:57,948 Flask application has started successfully
-2024-09-02 17:10:57,951  * Debugger is active!
-2024-09-02 17:11:00,447 Checking if token is in blocklist
-2024-09-02 17:11:00,447 Checking if token is in blocklist
-2024-09-02 17:11:00,451 User details: {'_id': ObjectId('66c83dc8a3348c74cd787990'), 'name': 'priya', 'email': 'priya@coffiedstaff.in', 'phone': 997854848, 'dept': 'CE', 'is_admin': True, 'password': '$pbkdf2-sha256$29000$uBeiVAohROh9r1VKKcW49w$KjkgLFTY.UfzREDg5Q6LyBC92dEhl2irRTHuKpNsJZk', 'created_at': datetime.datetime(2024, 8, 23, 13, 14, 8, 736000)}
-2024-09-02 17:11:00,451 Attempting to add new attendance data.
-2024-09-02 17:11:00,452 Entry not allowed on weekends.
-2024-09-02 17:11:00,452 An error occurred while inserting attendance data: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
-2024-09-02 17:11:00,452 Error during authorization: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
-2024-09-02 17:11:37,422 Checking if token is in blocklist
-2024-09-02 17:11:37,423 Checking if token is in blocklist
-2024-09-02 17:11:37,424 User details: {'_id': ObjectId('66c83dc8a3348c74cd787990'), 'name': 'priya', 'email': 'priya@coffiedstaff.in', 'phone': 997854848, 'dept': 'CE', 'is_admin': True, 'password': '$pbkdf2-sha256$29000$uBeiVAohROh9r1VKKcW49w$KjkgLFTY.UfzREDg5Q6LyBC92dEhl2irRTHuKpNsJZk', 'created_at': datetime.datetime(2024, 8, 23, 13, 14, 8, 736000)}
-2024-09-02 17:11:37,424 Attempting to add new attendance data.
-2024-09-02 17:11:37,425 Attendance data added successfully.
+2024-09-03 15:11:52,045 Flask application has started successfully
