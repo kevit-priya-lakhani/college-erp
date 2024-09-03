@@ -10,7 +10,7 @@ from models.schema import AttendanceSchema
 from db import mongo
 from log_services.logger import logger  # Import your logger
 
-blp = Blueprint("aanlytics", __name__, description="Analytics")
+blp = Blueprint("analytics", __name__, description="Analytics")
 
 
 @blp.route("/analytics/q1")
@@ -114,8 +114,10 @@ class AnalysisTask3(MethodView):
         # low attendance students
         data = request.json
         data["date"] = datetime.datetime.strptime(data["date"], f"%d-%m-%Y")
+        date_year= data['date'].year
+        startdate=datetime.datetime(date_year,1,1)
         pipeline = [
-            {"$match": {"date": {"$lte": data["date"]}}},
+            {"$match": {"date": {"$lte": data["date"],'$gte':startdate}}},
             {
                 "$lookup": {
                     "from": "students",
@@ -140,7 +142,7 @@ class AnalysisTask3(MethodView):
         pipeline = pipeline + [
             {
                 "$group": {
-                    "_id": {"student_id": "$student_id", "name": "$result.name"},
+                    "_id": {"student_id": "$student_id", "name": "$result.name","batch":"$result.batch","dept":"$result.dept"},
                     "total_count": {"$sum": 1},
                     "present_count": {"$sum": "$present"},
                 }
