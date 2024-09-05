@@ -1,2 +1,41 @@
-2024-09-03 17:56:56,945 Flask application has started successfully
-2024-09-03 17:56:56,948  * Debugger is active!
+2024-09-05 14:49:31,451 Flask application has started successfully
+2024-09-05 14:49:31,454  * Debugger is active!
+2024-09-05 14:50:09,273 Login attempt with email: priya@coffiedstaff.in
+2024-09-05 14:50:09,322 Staff login successful for email: priya@coffiedstaff.in
+2024-09-05 14:50:09,322 Adding claims to JWT
+2024-09-05 14:50:09,323 Adding claims to JWT
+2024-09-05 14:50:51,670 Checking if token is in blocklist
+2024-09-05 14:50:51,670 Checking if token is in blocklist
+2024-09-05 14:50:51,680 Attempting to register student with email: cathe@coffiestudentst.in
+2024-09-05 14:50:51,707 Student registered successfully with ID: {'$oid': '66d977f3da5a11fdbdd200c2'}
+2024-09-05 14:51:58,783 Checking if token is in blocklist
+2024-09-05 14:51:58,783 Checking if token is in blocklist
+2024-09-05 14:51:58,784 Attempting to update student with ID: 66d977f3da5a11fdbdd200c2
+2024-09-05 14:51:58,813 Student with ID: 66d977f3da5a11fdbdd200c2 updated successfully.
+2024-09-05 14:52:18,262 Checking if token is in blocklist
+2024-09-05 14:52:18,263 Checking if token is in blocklist
+2024-09-05 14:52:18,263 Attempting to delete student with ID: 66d977f3da5a11fdbdd200c2
+2024-09-05 14:52:18,264 Student with ID: 66d977f3da5a11fdbdd200c2 deleted successfully.
+2024-09-05 14:52:42,320 Checking if token is in blocklist
+2024-09-05 14:52:42,320 Fetching all students.
+2024-09-05 14:52:42,323 All students retrieved successfully.
+2024-09-05 14:54:00,598 Checking if token is in blocklist
+2024-09-05 14:54:00,598 Checking if token is in blocklist
+2024-09-05 14:54:00,599 Fetching year-wise student count analytics
+2024-09-05 14:54:00,652 Successfully fetched year-wise student count analytics
+2024-09-05 14:54:17,474 Checking if token is in blocklist
+2024-09-05 14:54:17,474 Checking if token is in blocklist
+2024-09-05 14:54:17,475 Fetching absentee student analytics
+2024-09-05 14:54:17,480 Successfully fetched absentee student analytics
+2024-09-05 14:56:09,469 Checking if token is in blocklist
+2024-09-05 14:56:09,469 Checking if token is in blocklist
+2024-09-05 14:56:09,470 Fetching low attendance student analytics
+2024-09-05 14:56:09,471 Successfully fetched low attendance student analytics
+2024-09-05 14:56:16,818 Checking if token is in blocklist
+2024-09-05 14:56:16,818 Checking if token is in blocklist
+2024-09-05 14:56:16,820 Fetching low attendance student analytics
+2024-09-05 14:56:16,829 Successfully fetched low attendance student analytics
+2024-09-05 14:57:58,478 Checking if token is in blocklist
+2024-09-05 14:57:58,478 Checking if token is in blocklist
+2024-09-05 14:57:58,479 Fetching batch and department-wise student count analytics
+2024-09-05 14:57:58,481 Successfully fetched batch and department-wise student count analytics

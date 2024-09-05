@@ -6,9 +6,9 @@ from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required
 from passlib.hash import pbkdf2_sha256
 from db import mongo
-from models.schema import StudentSchema, StudentUpdateSchema
-from helper import authorize
-from log_services.logger import logger  # Import your logger
+from schema import StudentSchema, StudentUpdateSchema
+from helper.helper import authorize
+from services.logger import logger  # Import your logger
 
 blp = Blueprint("student", __name__, description="Operations on students")
 

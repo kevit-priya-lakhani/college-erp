@@ -12,13 +12,13 @@ from flask_jwt_extended import (
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 import jwt
-from helper import authorize
-from models.schema import PlainStudentSchema, LoginSchema, PlainStaffSchema
+from helper.helper import authorize
+from schema import PlainStudentSchema, LoginSchema, PlainStaffSchema
 from passlib.hash import pbkdf2_sha256
 from blocklist import BLOCKLIST
 from db import mongo
 import re
-from log_services.logger import logger  # Import your logger
+from services.logger import logger  # Import your logger
 
 blp = Blueprint("login", __name__, description="Login/logout operations")
 

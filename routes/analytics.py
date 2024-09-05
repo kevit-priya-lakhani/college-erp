@@ -3,12 +3,11 @@ import json
 from bson import ObjectId, json_util
 from flask import request
 from flask_jwt_extended import jwt_required
-from helper import authorize
+from helper.helper import authorize
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from models.schema import AttendanceSchema
 from db import mongo
-from log_services.logger import logger  # Import your logger
+from services.logger import logger  # Import your logger
 
 blp = Blueprint("analytics", __name__, description="Analytics")
 

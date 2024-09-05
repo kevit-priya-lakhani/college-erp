@@ -9,11 +9,11 @@ from flask_jwt_extended import create_access_token, create_refresh_token, jwt_re
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from flask import request
-from helper import authorize, authorizeUpdate
-from models.schema import AttendanceSchema
+from helper.helper import authorize, authorizeUpdate
+from schema import AttendanceSchema
 from db import mongo
 import re
-from log_services.logger import logger  # Import your logger
+from services.logger import logger  # Import your logger
 
 blp = Blueprint("attendance", __name__, description="Operations on attendance")
 

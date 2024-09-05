@@ -7,12 +7,12 @@ from flask import request
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from helper import authorize
-from models.schema import DepartmentSchema
+from helper.helper import authorize
+from schema import DepartmentSchema
 from passlib.hash import pbkdf2_sha256
 from db import mongo
 import re
-from log_services.logger import logger  # Import your logger
+from services.logger import logger  # Import your logger
 
 blp = Blueprint("department", __name__, description="Operations on department")
 
