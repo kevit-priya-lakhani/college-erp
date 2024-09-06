@@ -21,7 +21,6 @@ class StudentSchema(PlainStudentSchema):
 
 class StudentUpdateSchema(Schema):
     """Schema for updating student information."""
-    email = fields.Email(validate=validate.Regexp(".*@.*student.*"))
     name = fields.Str()
     phone = fields.Int()
     dept = fields.Str()

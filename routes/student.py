@@ -1,14 +1,11 @@
-import datetime
-import json
-from bson import ObjectId, json_util
+
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required
-from passlib.hash import pbkdf2_sha256
-from db import mongo
-from schema import StudentSchema, StudentUpdateSchema
-from helper.helper import authorize
-from services.logger import logger  # Import your logger
+from helper.authorize_helper import authorize
+from services.logger import logger  
+from helper.student_helper import *
+from schema.student import *
 
 blp = Blueprint("student", __name__, description="Operations on students")
 
@@ -38,10 +35,8 @@ class Student(MethodView):
         """
         logger.info(f"Fetching student with ID: {student_id}")
         try:
-            student = mongo.db.students.find_one_or_404({"_id": ObjectId(student_id)})
-            student = json.loads(json_util.dumps(student))
-            logger.info(f"Student with ID: {student_id} retrieved successfully.")
-            return {**student}
+            student_details= get_student_data(student_id)
+            return {**student_details}
         except Exception as e:
             logger.error(f"Error fetching student with ID: {student_id}: {e}")
             abort(404, message=f"Student not found: {e}")
@@ -66,15 +61,8 @@ class Student(MethodView):
         """
         logger.info(f"Attempting to update student with ID: {student_id}")
         try:
-            if 'password' in student_data:
-                student_data['password'] = pbkdf2_sha256.hash(student_data['password'])
-
-            student_data['updated_at'] = datetime.datetime.now()
-            mongo.db.students.update_one({"_id": ObjectId(student_id)}, {'$set': student_data})
-            student = mongo.db.students.find_one_or_404({"_id": ObjectId(student_id)})
-            student = json.loads(json_util.dumps(student))
-            logger.info(f"Student with ID: {student_id} updated successfully.")
-            return {"message": "Student updated successfully", **student}
+            student_details = update_student_data(student_id,student_data)
+            return {"message": "Student updated successfully", **student_details}
         except Exception as e:
             logger.error(f"Error updating student with ID: {student_id}: {e}")
             abort(401, message=f"An error occurred while updating. {e}")
@@ -96,8 +84,7 @@ class Student(MethodView):
         """
         logger.info(f"Attempting to delete student with ID: {student_id}")
         try:
-            mongo.db.students.delete_one({"_id": ObjectId(student_id)})
-            logger.info(f"Student with ID: {student_id} deleted successfully.")
+            delete_student_details(student_id)
             return {"message": "Student deleted"}
         except Exception as e:
             logger.error(f"Error deleting student with ID: {student_id}: {e}")
@@ -123,9 +110,7 @@ class StudentList(MethodView):
         """
         logger.info("Fetching all students.")
         try:
-            student_list = mongo.db.students.find()
-            student_list = json.loads(json_util.dumps(student_list))
-            logger.info("All students retrieved successfully.")
+            student_list= get_student_list()
             return {"student_list": list(student_list)}
         except Exception as e:
             logger.error(f"Error fetching all students: {e}")

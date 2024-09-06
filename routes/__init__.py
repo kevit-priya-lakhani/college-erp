@@ -11,4 +11,4 @@
 #     allow_headers=config.FLASK_HEADERS,
 #     supports_credentials=True,
 # )
-
+from schema import *

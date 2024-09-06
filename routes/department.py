@@ -1,41 +1,14 @@
-import datetime
-from email import message
-import json
-from os import access
-from bson import json_util
-from flask import request
-from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
+from flask_jwt_extended import  jwt_required
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from helper.helper import authorize
-from schema import DepartmentSchema
-from passlib.hash import pbkdf2_sha256
-from db import mongo
-import re
-from services.logger import logger  # Import your logger
+from helper.authorize_helper import authorize
+from schema.department import DepartmentSchema
+from helper.department_helper import *
+from services.logger import logger  
 
 blp = Blueprint("department", __name__, description="Operations on department")
 
-@blp.route("/")
-class Index(MethodView):
-    """
-    A simple index route to check if the application is running.
-    
-    Methods:
-        get: Returns a string indicating that the application is running.
-    """
 
-    def get(self):
-        """
-        Return a message indicating that the application is running.
-        
-        Returns:
-            A string message.
-        """
-        logger.info("Index route accessed - App is running.")
-        return "App is running..."
-
-    
 @blp.route("/department/<string:department_name>")
 class Department(MethodView):
     """
@@ -62,9 +35,7 @@ class Department(MethodView):
         """
         logger.info(f"Fetching department with name: {department_name}")
         try:
-            department = mongo.db.department.find_one_or_404({"name": department_name})
-            department = json.loads(json_util.dumps(department))
-            logger.info(f"Department with name: {department_name} retrieved successfully.")
+            department= get_department_data(department_name)
             return {**department}
         except Exception as e:
             logger.error(f"Error fetching department with name: {department_name}: {e}")
@@ -90,13 +61,7 @@ class Department(MethodView):
         """
         logger.info(f"Attempting to update department with name: {department_name}")
         try:
-            department_data['updated_at'] = datetime.datetime.now()
-            mongo.db.department.update_one({"name": department_name}, {'$set': department_data})
-            mongo.db.staff.update_many({"dept": department_name}, {'$set': {"dept": department_data['name']}})
-            mongo.db.student.update_many({"dept": department_name}, {'$set': {"dept": department_data['name']}})
-            department = mongo.db.department.find_one_or_404({"name": department_name})
-            department = json.loads(json_util.dumps(department))
-            logger.info(f"Department with name: {department_name} updated successfully.")
+            department = update_department_data(department_name,department_data)
             return {"message": "Department updated successfully", **department}
         except Exception as e:
             logger.error(f"Error updating department with name: {department_name}: {e}")
@@ -118,13 +83,10 @@ class Department(MethodView):
             401 Unauthorized: If an error occurs during the deletion process.
             403 Forbidden: If the department is associated with existing student or staff data.
         """
+        
         logger.info(f"Attempting to delete department with name: {department_name}")
         try:
-            if mongo.db.student.find_one({'dept': department_name}) or mongo.db.staff.find_one({'dept': department_name}):
-                logger.warning(f"Deletion forbidden. Department {department_name} exists in student/staff data.")
-                abort(403, message=f"Forbidden. Department exists in student/staff data")
-            mongo.db.department.delete_one({"name": department_name})
-            logger.info(f"Department with name: {department_name} deleted successfully.")
+            delete_department_data(department_name)
             return {"message": "Department deleted"}
         except Exception as e:
             logger.error(f"Error deleting department with name: {department_name}: {e}")
@@ -152,9 +114,7 @@ class DepartmentList(MethodView):
         """
         logger.info("Fetching all departments.")
         try:
-            department_list = mongo.db.department.find()
-            department_list = json.loads(json_util.dumps(department_list))
-            logger.info("All departments retrieved successfully.")
+            department_list = get_department_list()
             return {"department_list": list(department_list)}
         except Exception as e:
             logger.error(f"Error fetching all departments: {e}")
@@ -178,10 +138,7 @@ class DepartmentList(MethodView):
         """
         logger.info("Attempting to add new department data.")
         try:
-            department_data['created_at'] = datetime.datetime.now()
-            print(department_data['created_at'])
-            mongo.db.department.insert_one(department_data)
-            logger.info("Department data added successfully.")
+            create_department(department_data)
             return {"message": "Department data added successfully"}
         except Exception as e:
             logger.error(f"An error occurred while inserting department data: {e}")

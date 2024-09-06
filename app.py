@@ -156,3 +156,5 @@ api.register_blueprint(AnalyticsBlueprint)
 
 # Log the successful startup of the application
 logger.info("Flask application has started successfully")
+
+import schema

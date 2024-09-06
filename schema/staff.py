@@ -19,7 +19,6 @@ class StaffUpdateSchema(Schema):
     """Schema for updating staff information."""
     _id = fields.Str(dump_only=True)
     name = fields.Str()
-    email = fields.Email(validate=validate.Regexp(".*@.*staff.*"))
     phone = fields.Int()
     dept = fields.Str()
     is_admin = fields.Bool()

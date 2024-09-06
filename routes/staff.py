@@ -1,18 +1,12 @@
-import datetime
-from email import message
-import json
-from os import access
-from bson import ObjectId, json_util
-from flask import request
-from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt
+
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
-from helper.helper import authorize, authorizeUpdate
-from schema import StaffUpdateSchema, StaffSchema
-from passlib.hash import pbkdf2_sha256
-from db import mongo
-import re
-from services.logger import logger  # Import your logger
+from helper.authorize_helper import authorize, authorizeUpdate
+from schema.staff import StaffUpdateSchema, StaffSchema
+from helper.staff_helper import *
+from services.logger import logger  
+from flask_jwt_extended import jwt_required
+
 
 blp = Blueprint("staff", __name__, description="Operations on staff")
 
@@ -21,17 +15,10 @@ blp = Blueprint("staff", __name__, description="Operations on staff")
 class Index(MethodView):
     """
     A simple index route to check if the application is running.
-    
-    Methods:
-        get: Returns a string indicating that the application is running.
     """
-
     def get(self):
         """
         Return a message indicating that the application is running.
-        
-        Returns:
-            A string message.
         """
         logger.info("Index route accessed - App is running.")
         return "App is running..."
@@ -63,10 +50,8 @@ class Staff(MethodView):
         """
         logger.info(f"Fetching staff member with ID: {staff_id}")
         try:
-            staff = mongo.db.staff.find_one_or_404({"_id": ObjectId(staff_id)})
-            staff = json.loads(json_util.dumps(staff))
-            logger.info(f"Staff member with ID: {staff_id} retrieved successfully.")
-            return {**staff}
+            staff_details=get_staff_data(staff_id)
+            return {**staff_details}
         except Exception as e:
             logger.error(f"Error fetching staff member with ID: {staff_id}: {e}")
             abort(404, message=f"Staff member not found: {e}")
@@ -92,14 +77,7 @@ class Staff(MethodView):
         """
         logger.info(f"Attempting to update staff member with ID: {staff_id}")
         try:
-            if 'password' in staff_data:
-                staff_data['password'] = pbkdf2_sha256.hash(staff_data['password'])
-            staff_data['updated_at'] = datetime.datetime.now()
-            mongo.db.staff.update_one({"_id": ObjectId(staff_id)}, {'$set': staff_data})
-            staff = mongo.db.staff.find_one_or_404({"_id": ObjectId(staff_id)})
-            staff = json.loads(json_util.dumps(staff))
-            logger.info(f"Staff member with ID: {staff_id} updated successfully.")
-            return {"message": "Member updated successfully", **staff}
+            update_staff_data(staff_id,staff_data)
         except Exception as e:
             logger.error(f"Error updating staff member with ID: {staff_id}: {e}")
             abort(401, message=f"An error occurred while updating. {e}")
@@ -121,9 +99,8 @@ class Staff(MethodView):
         """
         logger.info(f"Attempting to delete staff member with ID: {staff_id}")
         try:
-            mongo.db.staff.delete_one({"_id": ObjectId(staff_id)})
-            logger.info(f"Staff member with ID: {staff_id} deleted successfully.")
-            return {"message": "Staff deleted"}
+            message = delete_staff_data(staff_id)
+            return message
         except Exception as e:
             logger.error(f"Error deleting staff member with ID: {staff_id}: {e}")
             abort(401, message=f"An error occurred while deleting. {e}")
@@ -149,9 +126,7 @@ class StaffList(MethodView):
         """
         logger.info("Fetching all staff members.")
         try:
-            staff_list = mongo.db.staff.find()
-            staff_list = json.loads(json_util.dumps(staff_list))
-            logger.info("All staff members retrieved successfully.")
+            staff_list = get_staff_list()
             return {"staff_list": list(staff_list)}
         except Exception as e:
             logger.error(f"Error fetching all staff members: {e}")

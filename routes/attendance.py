@@ -9,12 +9,12 @@ from flask_jwt_extended import create_access_token, create_refresh_token, jwt_re
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from flask import request
-from helper.helper import authorize, authorizeUpdate
-from schema import AttendanceSchema
+from helper.authorize_helper import authorize, authorizeUpdate
+from schema.attendance import AttendanceSchema
 from db import mongo
 import re
 from services.logger import logger  # Import your logger
-
+from helper.attendance_helper import *
 blp = Blueprint("attendance", __name__, description="Operations on attendance")
 
 @blp.route("/attendance")
@@ -36,10 +36,7 @@ class Attendance(MethodView):
         Returns:
             A JSON object containing a list of all attendance records.
         """
-        logger.info("Fetching all attendance records.")
-        attendance_list = mongo.db.attendance.find()
-        attendance_list = json.loads(json_util.dumps(attendance_list))
-        logger.info("Attendance records retrieved successfully.")
+        attendance_list = get_attendance_data()
         return {"attendance": list(attendance_list)}
     
     @jwt_required()
@@ -60,15 +57,7 @@ class Attendance(MethodView):
         """
         logger.info("Attempting to add new attendance data.")
         try:
-            attendance_data = request.json
-            for data in attendance_data['data']:
-                data['date'] = datetime.datetime.strptime(data['date'], f"%d-%m-%Y")
-                data['student_id']= ObjectId(data['student_id'])
-                if data['date'].weekday() in (5, 6):
-                    logger.info("Entry not allowed on weekends.")
-                    abort(400, message="Entry not allowed on weekends.")
-            # print(attendance_data['date'])
-            mongo.db.attendance.insert_many(attendance_data['data'])
+            add_attendance_data()
             logger.info("Attendance data added successfully.")
             return {"message": "Attendance data added successfully"}
         except Exception as e:
@@ -96,10 +85,7 @@ class AttendanceStudent(MethodView):
         Returns:
             A JSON object containing a list of attendance records for the student.
         """
-        logger.info(f"Fetching attendance records for student ID: {student_id}")
-        attendance_list = mongo.db.attendance.find({"student_id": student_id})
-        attendance_list = json.loads(json_util.dumps(attendance_list))
-        logger.info(f"Attendance records retrieved for student ID: {student_id}")
+        attendance_list = get_student_attendance_list(student_id)
         return {"attendance": list(attendance_list)}
     
 
@@ -126,14 +112,7 @@ class AttendanceDate(MethodView):
         """
         logger.info(f"Fetching attendance records for date: {date}")
         try:
-            date = datetime.datetime.strptime(date, f"%Y-%m-%d").datetime()
-            attendance_list = mongo.db.attendance.find(
-                {"date": date}
-                )
-            attendance_list = json.loads(
-                json_util.dumps(attendance_list)
-                )
-            logger.info(f"Attendance records retrieved for date: {date}")
+            attendance_list = get_datewise_attendance_data(date)
             return {"attendance": list(attendance_list)}
         except Exception as e:
             logger.error(f"An error occurred while fetching attendance data for date {date}: {e}")
@@ -147,9 +126,7 @@ class AttendanceUpdate(MethodView):
     @blp.arguments(AttendanceSchema)
     def put(self,attendance_data,date, student_id):
         try:
-            date = datetime.datetime.strptime(date, f"%d-%m-%Y")
-            mongo.db.attendance.update_one({"date":date,"student_id":student_id},{'$set':{"present":attendance_data['present']}})
-            logger.info("Attendance data updated successfully.")
+            update_attendance_data(attendance_data,date,student_id)
             return {"message": "Attendance data updated successfully"}
         except Exception as e:
             logger.error(f"An error occurred while updating attendance data: {e}")

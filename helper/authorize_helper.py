@@ -4,7 +4,7 @@ from flask_smorest import abort
 from flask import request, jsonify
 from flask_jwt_extended import get_jwt, get_jwt_identity, verify_jwt_in_request
 from db import mongo
-from log_services.logger import logger  # Import your logger
+from services.logger import logger  # Import your logger
 
 # Initialize a logger
 
