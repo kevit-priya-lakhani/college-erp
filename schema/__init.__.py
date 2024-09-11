@@ -34,7 +34,7 @@ Classes:
 """
 
 
-from attendance import *
+from attendance import *    
 from department import *
 from staff import *
 from student import *

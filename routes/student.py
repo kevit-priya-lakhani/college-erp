@@ -3,7 +3,8 @@ from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required
 from helper.authorize_helper import authorize
-from services.logger import logger  
+from services.logger import logger 
+from helper import delete_student_details 
 from helper.student_helper import *
 from schema.student import *
 

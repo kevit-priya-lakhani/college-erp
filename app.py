@@ -9,7 +9,6 @@ from routes.user import blp as UserBlueprint
 from routes.attendance import blp as AttendanceBlueprint
 from routes.department import blp as DepartmentBlueprint
 from routes.analytics import blp as AnalyticsBlueprint
-from blocklist import BLOCKLIST
 from db import mongo
 import logging
 
@@ -55,7 +54,8 @@ def check_if_token_in_blocklist(jwt_header, jwt_payload):
         bool: True if the token is in the blocklist, False otherwise.
     """
     logger.info("Checking if token is in blocklist")
-    return jwt_payload["jti"] in BLOCKLIST
+    jti_in_blacklist = mongo.db.blacklist.find_one({"jti":jwt_payload["jti"] })
+    return jti_in_blacklist is not None
 
 @jwt.revoked_token_loader
 def revoked_token_callback(jwt_header, jwt_payload):

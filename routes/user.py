@@ -22,12 +22,6 @@ class Login(MethodView):
         """
         Log in a user by verifying their credentials.
 
-        Args:
-            login_data (dict): The login data containing email and password.
-
-        Returns:
-            JSON response with a success message and tokens if login is successful,
-            or an error message if credentials are invalid.
         """
         logger.info("Login attempt with email: %s", login_data["email"])
 
@@ -49,9 +43,6 @@ class UserLogout(MethodView):
         """
         Log out a user by adding their JWT ID to the blocklist.
 
-        Returns:
-            JSON response with a success message if logout is successful,
-            or an error message if an exception occurs.
         """
         logger.info("Logout attempt")
 
@@ -73,8 +64,7 @@ class StudentRegister(MethodView):
         """
         Health check for the registration endpoint.
 
-        Returns:
-            A message indicating that the endpoint is running.
+       
         """
         return "running"
 
@@ -85,14 +75,8 @@ class StudentRegister(MethodView):
         """
         Register a new student.
 
-        Args:
-            mem_data (dict): The student data for registration.
-
-        Returns:
-            JSON response with a success message and student ID if registration is successful,
-            or an error message if email already exists or department is invalid.
         """
-        register_student_data(mem_data)
+        return register_student_data(mem_data)
 
 
 @blp.route("/register/staff")
@@ -108,11 +92,5 @@ class StaffRegister(MethodView):
         """
         Register a new staff member.
 
-        Args:
-            mem_data (dict): The staff data for registration.
-
-        Returns:
-            JSON response with a success message and staff ID if registration is successful,
-            or an error message if email already exists or department is invalid.
         """
-        register_staff_data(mem_data)
+        return register_staff_data(mem_data)

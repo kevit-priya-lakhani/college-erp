@@ -1,6 +1,8 @@
 import datetime
 import json
 import re
+import redis
+import jwt
 from db import mongo
 from passlib.hash import pbkdf2_sha256
 from services.logger import logger
@@ -11,7 +13,6 @@ from flask_jwt_extended import (
     get_jwt,
 )
 from flask_smorest import abort
-from blocklist import BLOCKLIST
 from bson import json_util
 
 def user_login(login_data):
@@ -50,8 +51,10 @@ def user_login(login_data):
 
 def user_logout():
     jti = get_jwt()["jti"]
-    BLOCKLIST.add(jti)
+    mongo.db.blacklist.insert_one({"jti":jti,"created_at":datetime.datetime.now()})
     logger.info("User logged out successfully")
+    return {"msg":"Access token revoked"}
+    
 
 
 def register_student_data(mem_data):
@@ -94,3 +97,4 @@ def register_staff_data(mem_data):
     
     logger.error("Invalid email format: %s", mem_data["email"])
     return {"message": "Invalid email"}
+
