@@ -135,7 +135,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/staff/66c6e64b8a9de9cd4503d069",
+							"raw": "http://127.0.0.1:5000/staff/66c84023cb248d9dabaa6696",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -146,7 +146,7 @@
 							"port": "5000",
 							"path": [
 								"staff",
-								"66c6e64b8a9de9cd4503d069"
+								"66c84023cb248d9dabaa6696"
 							]
 						}
 					},
@@ -410,7 +410,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/staff/66c73da7a30eec74570d711e",
+							"raw": "http://127.0.0.1:5000/staff/66c6e64b8a9de9cd4503d069",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -421,7 +421,7 @@
 							"port": "5000",
 							"path": [
 								"staff",
-								"66c73da7a30eec74570d711e"
+								"66c6e64b8a9de9cd4503d069"
 							]
 						}
 					},
@@ -625,7 +625,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/staff/66c73d82a30eec74570d711d",
+							"raw": "http://127.0.0.1:5000/staff/66c6e64b8a9de9cd4503d069",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -636,7 +636,7 @@
 							"port": "5000",
 							"path": [
 								"staff",
-								"66c73d82a30eec74570d711d"
+								"66c6e64b8a9de9cd4503d069"
 							]
 						}
 					},
@@ -785,7 +785,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Crystal\",\n    \"email\" : \"crystal@coffiestudentst.in\",\n    \"phone\" : 879765484,\n    \"dept\" : \"EC\",\n    \"sem\":1,\n    \"batch\":\"2019\",\n    \"password\": \"rgrg\"}\n",
+							"raw": "{\n    \"name\": \"cathe\",\n    \"email\" : \"cathe@coffiestudentst.in\",\n    \"phone\" : 879765484,\n    \"dept\" : \"EC\",\n    \"sem\":1,\n    \"batch\":\"2019\",\n    \"password\": \"rgrg\"}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -944,7 +944,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\n    \"email\":\"sdl@coffiestudent.com\",\n    \"name\": \"Shreya Dipak Lakhani\",\n    \"password\": \"shreyas\"\n    \n}",
+							"raw": "{\n\n\n    \"name\": \"catherine\",\n    \"password\": \"12234\"\n    \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -952,7 +952,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/student/66c6d45ba06378ed34107f19",
+							"raw": "http://127.0.0.1:5000/students/66d977f3da5a11fdbdd200c2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -962,8 +962,8 @@
 							],
 							"port": "5000",
 							"path": [
-								"student",
-								"66c6d45ba06378ed34107f19"
+								"students",
+								"66d977f3da5a11fdbdd200c2"
 							]
 						}
 					},
@@ -1053,7 +1053,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/student/66c6eb6b5008b04eaabd8947",
+							"raw": "http://127.0.0.1:5000/students/66d977f3da5a11fdbdd200c2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -1063,8 +1063,8 @@
 							],
 							"port": "5000",
 							"path": [
-								"student",
-								"66c6eb6b5008b04eaabd8947"
+								"students",
+								"66d977f3da5a11fdbdd200c2"
 							]
 						}
 					},
@@ -1145,7 +1145,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:5000/student/66c6d45ba06378ed34107f19",
+							"raw": "http://127.0.0.1:5000/students/66c73cbdbf6a67c64ee5ac7e",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -1155,8 +1155,8 @@
 							],
 							"port": "5000",
 							"path": [
-								"student",
-								"66c6d45ba06378ed34107f19"
+								"students",
+								"66c73cbdbf6a67c64ee5ac7e"
 							]
 						}
 					},
@@ -1228,12 +1228,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/student",
+							"raw": "{{url}}/students",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"student"
+								"students"
 							]
 						}
 					},
@@ -1742,12 +1742,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/department",
+							"raw": "{{url}}/departments",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"department"
+								"departments"
 							]
 						}
 					},
@@ -1822,12 +1822,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/department",
+							"raw": "{{url}}/departments",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"department"
+								"departments"
 							]
 						}
 					},
@@ -1911,12 +1911,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/department/CE",
+							"raw": "{{url}}/departments/CE",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"department",
+								"departments",
 								"CE"
 							]
 						}
@@ -2005,12 +2005,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/department/CE",
+							"raw": "{{url}}/departments/CE",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"department",
+								"departments",
 								"CE"
 							]
 						}
@@ -2096,12 +2096,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/department/CE",
+							"raw": "{{url}}/departments/CE",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"department",
+								"departments",
 								"CE"
 							]
 						}

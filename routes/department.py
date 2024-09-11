@@ -9,7 +9,7 @@ from services.logger import logger
 blp = Blueprint("department", __name__, description="Operations on department")
 
 
-@blp.route("/department/<string:department_name>")
+@blp.route("/departments/<string:department_name>")
 class Department(MethodView):
     """
     A resource class for handling operations on individual departments.
@@ -93,7 +93,7 @@ class Department(MethodView):
             abort(401, message=f"An error occurred while deleting. {e}")
 
 
-@blp.route("/department")
+@blp.route("/departments")
 class DepartmentList(MethodView):
     """
     A resource class for handling operations on the list of departments.

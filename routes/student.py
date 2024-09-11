@@ -11,7 +11,7 @@ from schema.student import *
 blp = Blueprint("student", __name__, description="Operations on students")
 
 
-@blp.route("/student/<string:student_id>")
+@blp.route("/students/<string:student_id>")
 class Student(MethodView):
     """
     A resource class for handling operations on individual students.
@@ -92,7 +92,7 @@ class Student(MethodView):
             abort(401, message=f"An error occurred while deleting. {e}")
 
 
-@blp.route("/student")
+@blp.route("/students")
 class StudentList(MethodView):
     """
     A resource class for handling operations on the list of students.
